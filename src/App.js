@@ -1,11 +1,14 @@
 import React from "react";
 import "./index"
+import Home from "./Sections/Home";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <h1>Vuyolwethu</h1>
-    </div>  
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+     
+    </Routes>  
   );
 }
 
