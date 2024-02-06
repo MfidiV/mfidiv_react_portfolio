@@ -20,18 +20,18 @@ const Home = () => {
           <span> </span>
           <span>I'm</span>
         </span>
-        {/* <h1>Vuyolwethu Mfidi</h1>
-        <h2>Software Developer</h2> */}
+        <h1>Vuyolwethu Mfidi</h1>
+        <h2>Software Developer</h2>
       </div>
 
-      {/* <div className="homeButtons">
+      <div className="homeButtons">
         <button className="btn1" onClick={openPDF}>
           Download CV
         </button>
         <button className="btn1" onClick={() => window.location.href = "#contact"}>
           Contact Me
         </button>
-      </div> */}
+      </div>
     </section>
   );
 };
