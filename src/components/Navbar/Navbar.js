@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 
 const NavBar = () => {
@@ -7,7 +9,7 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode
+    setDarkMode(!darkMode);
   };
 
   const toggleMenu = () => {
@@ -28,8 +30,10 @@ const NavBar = () => {
         <li><ScrollLink to="portfolio" smooth={true} duration={500} onClick={toggleMenu}>Portfolio</ScrollLink></li>
         <li><ScrollLink to="contact" smooth={true} duration={500} onClick={toggleMenu}>Contact</ScrollLink></li>
         <li>
-          {/* Use the darkMode state to dynamically switch between moon and sun icons */}
-          <div className={`bx ${darkMode ? 'bx-sun' : 'bx-moon'}`} id="darkmode" onClick={toggleDarkMode}></div>
+          {/* Render Font Awesome icons */}
+          <div id="darkmode" onClick={toggleDarkMode}>
+            {darkMode ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
+          </div>
         </li>
       </ul>
     </header>
