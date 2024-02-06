@@ -9,7 +9,18 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode(!darkMode); // Toggle darkMode state
+    const darkModeElement = document.querySelector('#darkmode');
+    if (darkModeElement) {
+      // Toggle classes based on darkMode state
+      if (darkMode) {
+        darkModeElement.classList.replace('bx-sun', 'bx-moon');
+      } else {
+        darkModeElement.classList.replace('bx-moon', 'bx-sun');
+      }
+      // Toggle body class for dark mode
+      document.body.classList.toggle('dark-mode');
+    }
   };
 
   const toggleMenu = () => {

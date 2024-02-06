@@ -84,6 +84,18 @@
     cursor: pointer;
     color: var(--dark-mode-color); /* Set the color for the moon icon */
   }
+  body.active {
+    --text-color: #251c13;
+    --bg-color: #c9a57a;
+  }
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  *::selection {
+    color: var(--bg-color);
+    background: var(--main-color);
+  }
   
   /* Hamburger Menu Styling */
   @media screen and (max-width: 768px) {
