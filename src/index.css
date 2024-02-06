@@ -125,47 +125,6 @@ a {
   font-size: var(--p-font);
   color: rgb(2, 166, 70);
 }
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--bg-color);
-  padding: 13px 10%;
-  transition: 0.2s;
-  box-shadow: -3px -3px 7px #ffffff73,
-				2px 2px 5px rgba(94, 104, 121, 0.288);
-}
-header.shadow {
-  box-shadow: 0 0 4px rgb(14 55 54 / 15%);
-}
-.logo {
-  font-size: 1.61rem;
-  font-weight: 600;
-  color: var(--text-color);
-}
-.navbar {
-  display: flex;
-}
-.navbar a {
-  font-size: 1rem;
-  padding: 10px 20px;
-  color: var(--text-color);
-  font-weight: 500;
-}
-.navbar a:hover {
-  color: var(--hover);
-}
-#menu-icon {
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 10001;
-  display: none;
-}
 #darkmode {
   font-size: 22px;
   cursor: pointer;
@@ -210,57 +169,7 @@ header.shadow {
 }
 
 
-.about-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* gap: 1rem; */
-  margin-top: 2rem;
-  align-items: center;
-  opacity: 0; /* Set initial opacity to 0 */
-  transform: translateX(-20px); /* Move the container to the left initially */
-  animation: slideIn 0.8s forwards ease-out; /* Define animation properties */
-}
- 
-.about-img img {
-  margin-left: 6rem;
-  width: 50%;
-  border-radius: 5%;
-  height: 100%;
-  border: 2px solid var(--text-color);
-}
-.about-text p {
-  font-size: var(--p-font);
-  font-weight: 400;
-  text-align: justify;
-  margin-bottom: 1rem
-}
-.about-text h2 {
-  display: inline-block;
-  border-bottom: 3px solid var(--text-color);
-  padding-bottom: 5px; 
-  margin-bottom: 18px;
-}
 
-
-.skill {
-  display: flex;
-  justify-content:space-evenly;
-  flex-wrap: wrap;
-
-}
-
-.btn {
-  display: inline-flex;
-  width: 100px;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
-  background: var(--main-color);
-  color: #fff;
-  border-radius: 0.5rem;
-  cursor: not-allowed;
-  pointer-events: none;
-}
 
 @media screen and (max-width: 600px) {
   .skill .btn {

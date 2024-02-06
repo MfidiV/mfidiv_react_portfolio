@@ -1,0 +1,51 @@
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+    align-items: center;
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateX(-20px); /* Move the container to the left initially */
+    animation: slideIn 0.8s forwards ease-out; /* Define animation properties */
+  }
+   
+  .about-img img {
+    margin-left: 6rem;
+    width: 50%;
+    border-radius: 5%;
+    height: 100%;
+
+  }
+  .about-text p {
+    font-size: var(--p-font);
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 1rem
+  }
+  .about-text h2 {
+    display: inline-block;
+    border-bottom: 3px solid var(--text-color);
+    padding-bottom: 5px; 
+    margin-bottom: 18px;
+  }
+  
+  
+  .skill {
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+  
+  }
+  
+  .btn {
+    display: inline-flex;
+    width: 100px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
