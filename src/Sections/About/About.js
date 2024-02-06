@@ -3,7 +3,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './about.css'; // Make sure to import the CSS file
 
 const About = () => {
-  const [hovered, setHovered] = useState(false);
+  // Initialize separate state variables for each button's hover state
+  const [hoveredHTML, setHoveredHTML] = useState(false);
+  const [hoveredCSS, setHoveredCSS] = useState(false);
+  const [hoveredJavaScript, setHoveredJavaScript] = useState(false);
+  const [hoveredNodeJs, setHoveredNodeJs] = useState(false);
+  const [hoveredReact, setHoveredReact] = useState(false);
+  const [hoveredBootstrap, setHoveredBootstrap] = useState(false);
+  const [hoveredVBNet, setHoveredVBNet] = useState(false);
+  const [hoveredJava, setHoveredJava] = useState(false);
+  const [hoveredPython, setHoveredPython] = useState(false);
 
   return (
     <section className="about" id="about">
@@ -25,38 +34,75 @@ const About = () => {
           {/* Box 2 */}
           <div className="skills-container">
             <div className="skill">
-              <button className="btn" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-                {hovered ? 'Seal' : 'HTML'}
+              {/* Handle hover state individually for each button */}
+              <button 
+                className="btn1" 
+                onMouseEnter={() => setHoveredHTML(true)} 
+                onMouseLeave={() => setHoveredHTML(false)}
+              >
+                {hoveredHTML ? '80%' : 'HTML'}
               </button>
-              <button className="btn" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-                {hovered ? 'Seal' : 'CSS'}
+              <button 
+                className="btn" 
+                onMouseEnter={() => setHoveredCSS(true)} 
+                onMouseLeave={() => setHoveredCSS(false)}
+              >
+                {hoveredCSS ? '85%' : 'CSS'}
               </button>
-              <button className="btn" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-                {hovered ? 'Seal' : 'JavaScript'}
+              <button 
+                className="btn" 
+                onMouseEnter={() => setHoveredJavaScript(true)} 
+                onMouseLeave={() => setHoveredJavaScript(false)}
+              >
+                {hoveredJavaScript ? '85%' : 'JavaScript'}
               </button>
             </div>
 
             <div className="skill">
-              <button className="btn" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-                {hovered ? 'Seal' : 'NodeJs'}
+              <button 
+                className="btn" 
+                onMouseEnter={() => setHoveredNodeJs(true)} 
+                onMouseLeave={() => setHoveredNodeJs(false)}
+              >
+                {hoveredNodeJs ? '69%' : 'NodeJs'}
               </button>
-              <button className="btn" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-                {hovered ? 'Seal' : 'React'}
+              <button 
+                className="btn" 
+                onMouseEnter={() => setHoveredReact(true)} 
+                onMouseLeave={() => setHoveredReact(false)}
+              >
+                {hoveredReact ? '70%' : 'React'}
               </button>
-              <button className="btn" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-                {hovered ? 'Seal' : 'Bootstrap'}
+              <button 
+                className="btn" 
+                onMouseEnter={() => setHoveredBootstrap(true)} 
+                onMouseLeave={() => setHoveredBootstrap(false)}
+              >
+                {hoveredBootstrap ? '70%' : 'Bootstrap'}
               </button>
             </div>
 
             <div className="skill">
-              <button className="btn" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-                {hovered ? 'Seal' : 'VB.Net'}
+              <button 
+                className="btn" 
+                onMouseEnter={() => setHoveredVBNet(true)} 
+                onMouseLeave={() => setHoveredVBNet(false)}
+              >
+                {hoveredVBNet ? '80%' : 'VB.Net'}
               </button>
-              <button className="btn" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-                {hovered ? 'Seal' : 'Java'}
+              <button 
+                className="btn" 
+                onMouseEnter={() => setHoveredJava(true)} 
+                onMouseLeave={() => setHoveredJava(false)}
+              >
+                {hoveredJava ? '75%' : 'Java'}
               </button>
-              <button className="btn" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-                {hovered ? 'Seal' : 'Python'}
+              <button 
+                className="btn" 
+                onMouseEnter={() => setHoveredPython(true)} 
+                onMouseLeave={() => setHoveredPython(false)}
+              >
+                {hoveredPython ? '78%' : 'Python'}
               </button>
             </div>
           </div>
