@@ -23,7 +23,7 @@ const About = () => {
       {/* About Content */}
       <div className="about-container">
         <div className="about-img">
-          <img src="/Images/Vuyo_img.png" alt="" />
+          <img src="/Images/about-1.jpg" alt="" />
         </div>
         <div className="about-text">
           <p>
@@ -36,7 +36,7 @@ const About = () => {
             <div className="skill">
               {/* Handle hover state individually for each button */}
               <button 
-                className="btn1" 
+                className="btn" 
                 onMouseEnter={() => setHoveredHTML(true)} 
                 onMouseLeave={() => setHoveredHTML(false)}
               >
