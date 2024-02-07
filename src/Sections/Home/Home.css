@@ -19,7 +19,7 @@
 .homeButtons {
   display: flex;
   flex-direction: row; /* Display buttons in a row */
-  gap: 10px; /* Adjust the gap between buttons as needed */
+  gap: 2rem; /* Adjust the gap between buttons as needed */
 }
 
 .home-text h1{

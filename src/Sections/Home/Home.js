@@ -1,14 +1,15 @@
+// Home.js
 import React from 'react';
 import './home.css';
 
-const Home = () => {
+const Home = ({ theme,setTheme }) => {
   const openPDF = () => {
-    var pdfPath = process.env.PUBLIC_URL + '/Documents/Mfidi_V.pdf'; // Adjust the path accordingly
+    var pdfPath = process.env.PUBLIC_URL + '/Documents/Mfidi_V.pdf';
     window.open(pdfPath, '_blank');
   };
 
   return (
-    <section className="home" id="home">
+    <section className={`home ${theme}`}>
       <div className="home-text">
         <span className="animated-text">
           <span>H</span>
@@ -24,7 +25,7 @@ const Home = () => {
         <h2>Software Developer</h2>
       </div>
 
-      <div className="homeButtons">
+      <div className="home-buttons">
         <button className="btn1" onClick={openPDF}>
           Download CV
         </button>
