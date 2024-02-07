@@ -49,12 +49,13 @@ const About = () => {
             <div className="skill">
               {/* Handle hover state individually for each button */}
               <button 
-                className="btn" 
-                onMouseEnter={() => setShowPercentage(true)}
-                onMouseLeave={() => setShowPercentage(false)}
-              >
-                {showPercentage ? `${Math.floor(Math.random() * 100)}%` : 'HTML'}
+                    className="btn" 
+                    onMouseEnter={() => setShowPercentage(true)}
+                    onMouseLeave={() => setShowPercentage(false)}
+                  >
+                    {showPercentage ? '18%' : 'HTML'}
               </button>
+
               <button 
                 className="btn" 
                 onMouseEnter={() => setHoveredCSS(true)} 
