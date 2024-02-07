@@ -48,13 +48,13 @@ const About = () => {
           <div className="skills-container">
             <div className="skill">
               {/* Handle hover state individually for each button */}
-              <button 
-                    className="btn" 
-                    onMouseEnter={() => setShowPercentage(true)}
-                    onMouseLeave={() => setShowPercentage(false)}
-                  >
-                    {showPercentage ? '18%' : 'HTML'}
-              </button>
+              <button
+                  className={`btn ${showPercentage ? 'green-bg' : 'blue-bg'}`} // Apply background color based on showPercentage
+                  onMouseEnter={() => setShowPercentage(true)}
+                  onMouseLeave={() => setShowPercentage(false)}
+                >
+                  {showPercentage ? '85%' : 'HTML'}
+          </button>
 
               <button 
                 className="btn" 
