@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './about.css'; // Make sure to import the CSS file
 
+
+
 const About = () => {
   // Initialize separate state variables for each button's hover state
-  const [hoveredHTML, setHoveredHTML] = useState(false);
+  // const [hoveredHTML, setHoveredHTML] = useState(false);
   const [hoveredCSS, setHoveredCSS] = useState(false);
   const [hoveredJavaScript, setHoveredJavaScript] = useState(false);
   const [hoveredNodeJs, setHoveredNodeJs] = useState(false);
@@ -13,6 +15,17 @@ const About = () => {
   const [hoveredVBNet, setHoveredVBNet] = useState(false);
   const [hoveredJava, setHoveredJava] = useState(false);
   const [hoveredPython, setHoveredPython] = useState(false);
+
+   // Initialize state variable for JavaScript button text
+  const [showPercentage, setShowPercentage] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowPercentage(prevShowPercentage => !prevShowPercentage);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="about" id="about">
@@ -37,10 +50,10 @@ const About = () => {
               {/* Handle hover state individually for each button */}
               <button 
                 className="btn" 
-                onMouseEnter={() => setHoveredHTML(true)} 
-                onMouseLeave={() => setHoveredHTML(false)}
+                onMouseEnter={() => setShowPercentage(true)}
+                onMouseLeave={() => setShowPercentage(false)}
               >
-                {hoveredHTML ? '80%' : 'HTML'}
+                {showPercentage ? `${Math.floor(Math.random() * 100)}%` : 'HTML'}
               </button>
               <button 
                 className="btn" 
