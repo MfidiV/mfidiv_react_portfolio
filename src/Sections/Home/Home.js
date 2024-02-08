@@ -1,15 +1,14 @@
-// Home.js
 import React from 'react';
 import './home.css';
 
-const Home = ({ theme,setTheme }) => {
+const Home = ({ theme }) => {
   const openPDF = () => {
     var pdfPath = process.env.PUBLIC_URL + '/Documents/Mfidi_V.pdf';
     window.open(pdfPath, '_blank');
   };
 
   return (
-    <section className={`home ${theme}`}>
+    <section className={`home ${theme === 'dark' ? 'dark-mode' : ''}`}>
       <div className="home-text">
         <span className="animated-text">
           <span>H</span>

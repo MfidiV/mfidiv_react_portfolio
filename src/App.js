@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
-// import Home from "./Sections/Home/Home";
+import Home from "./Sections/Home/Home";
 
 function App() {
   const currentTheme = localStorage.getItem("current_theme");
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className={`container ${theme}`}>
       <Navbar theme={theme} setTheme={setTheme} />
-      {/* <Home theme={theme} /> */}
+      <Home theme={theme} />
     </div>
   );
 }

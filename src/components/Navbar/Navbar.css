@@ -77,8 +77,7 @@
     display: flex;
   }
 }
-.container.dark .logo,
-.container.dark .nav-links {
+.container.dark .logo{
   color: white; /* Set logo and menu color to background color */
 }
 
