@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './about.css'; // Make sure to import the CSS file
+import './About.css'; // Make sure to import the CSS file
 
 
 

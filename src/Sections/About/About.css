@@ -1,70 +1,76 @@
 .about-container {
-    display: grid;
-    /* background-color: */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 2rem;
-    align-items: center;
-    opacity: 0; /* Set initial opacity to 0 */
-    transform: translateX(-20px); /* Move the container to the left initially */
-    animation: slideIn 0.8s forwards ease-out; /* Define animation properties */
-  }
-   
-  .about-img img {
-    margin-left: 6rem;
-    width: 50%;
-    border-radius: 5%;
-    height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 0.8s forwards ease-out;
+}
 
-  }
-  .about-text p {
-    font-size: var(--p-font);
-    font-weight: 400;
-    text-align: justify;
-    margin-bottom: 1rem
-  }
-  .about-text h2 {
-    display: inline-block;
-    border-bottom: 3px solid var(--text-color);
-    padding-bottom: 5px; 
-    margin-bottom: 18px;
-  }
-  
-  
-  .skill {
-    display: flex;
-    justify-content:space-evenly;
-    flex-wrap: wrap;
-  
-  }
-  
-  .btn {
-    display: inline-flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    width: 150px;
-    padding: 10px;
-    margin: 5px;
-    background: var(--main-color);
-    color: #fff;
-    text-align: center;
-    border-radius: 0.5rem;
-    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-  }
-  
-  /* Change color to green on hover */
-  .btn:hover {
-    background-color:  rgb(2, 166, 70);;
-  }
+.about-img img {
+  margin-left: 6rem;
+  width: 50%;
+  border-radius: 5%;
+  height: 100%;
+}
 
-  .green-bg {
-    background-color:  rgb(2, 166, 70);;
+.about-text p {
+  font-size: var(--p-font);
+  font-weight: 400;
+  text-align: justify;
+  margin-bottom: 1rem;
+  color: var(--bg-color);
+}
+
+.dark-mode .about-text p {
+  color: var(--text-color); /* Set text color to text color in dark mode */
+}
+
+.about-text h2 {
+  display: inline-block;
+  border-bottom: 3px solid var(--text-color);
+  padding-bottom: 5px;
+  margin-bottom: 18px;
+}
+
+.skill {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  padding: 10px;
+  margin: 5px;
+  background: var(--main-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: rgb(2, 166, 70);
+}
+
+.green-bg {
+  background-color: rgb(2, 166, 70);
+}
+
+.blue-bg {
+  background: var(--main-color);
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  .blue-bg {
-    background: var(--main-color);
-  }
-  
-  
-  
+}
