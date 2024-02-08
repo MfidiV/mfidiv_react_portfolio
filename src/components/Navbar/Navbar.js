@@ -1,44 +1,49 @@
-import React, { useState } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon, faSun, faBars } from '@fortawesome/free-solid-svg-icons';
-import './Navbar.css';
+import React, { useState } from "react";
+import "./Navbar.css";
+import toggle_light from "../assets/night.png";
+import toggle_dark from "../assets/day.png";
+import menu_icon_light from "../assets/menu_icon-light.png";
+import menu_icon_dark from "../assets/menu-icon-dark.png";
 
-const NavBar = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.body.classList.toggle('dark-mode');
-  };
+const Navbar = ({ theme, setTheme }) => {
+  const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setShowMenu(!showMenu);
+  };
+
+  const toggleMode = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
   };
 
   return (
-    <header className={`header ${menuOpen ? 'open' : ''} ${darkMode ? 'dark-mode' : ''}`}>
-      <div className="logo">Portfolio</div>
-      {/* Use a button for the menu icon */}
-      <button className="menu-icon" onClick={toggleMenu}>
-        <FontAwesomeIcon icon={faBars} />
-      </button>
-      <ul className="navbar">
-        <li><ScrollLink to="home" smooth={true} duration={100} onClick={toggleMenu}>Home</ScrollLink></li>
-        <li><ScrollLink to="about" smooth={true} duration={100} onClick={toggleMenu}>About</ScrollLink></li>
-        <li><ScrollLink to="services" smooth={true} duration={500} onClick={toggleMenu}>Services</ScrollLink></li>
-        <li><ScrollLink to="portfolio" smooth={true} duration={500} onClick={toggleMenu}>Portfolio</ScrollLink></li>
-        <li><ScrollLink to="contact" smooth={true} duration={500} onClick={toggleMenu}>Contact</ScrollLink></li>
-        <li>
-          {/* Render Font Awesome icons */}
-          <div id="darkmode" onClick={toggleDarkMode}>
-            {darkMode ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
-          </div>
-        </li>
+    <div className="navbar">
+      <h1 className="logo">Vuyolwethu</h1>
+      <ul className={`nav-links ${showMenu ? "show" : ""}`}>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Portfolio</li>
+        <li>Contact</li>
       </ul>
-    </header>
+      <img
+        onClick={toggleMode}
+        src={theme === "light" ? toggle_light : toggle_dark}
+        alt=""
+        className="toggle-icon"
+      />
+      <img
+  src={theme === 'light' ? menu_icon_light : menu_icon_dark}
+  alt=""
+  className="menu-icon"
+  onClick={toggleMenu}
+/>
+    </div>
   );
 };
 
-export default NavBar;
+export default Navbar;

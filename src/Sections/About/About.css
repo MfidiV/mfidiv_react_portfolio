@@ -1,5 +1,6 @@
 .about-container {
     display: grid;
+    /* background-color: */
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-top: 2rem;
@@ -54,7 +55,16 @@
   
   /* Change color to green on hover */
   .btn:hover {
-    background-color: green;
+    background-color:  rgb(2, 166, 70);;
   }
+
+  .green-bg {
+    background-color:  rgb(2, 166, 70);;
+  }
+  
+  .blue-bg {
+    background: var(--main-color);
+  }
+  
   
   
