@@ -14,16 +14,20 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: var();
+  color: var(--bg-color); /* Set text color using custom property */
 }
 
-.homeButtons {
+.dark-mode .home-text {
+  color: var(--text-color); /* Set text color to bg color in dark mode */
+}
+
+.home-buttons {
   display: flex;
   flex-direction: row; /* Display buttons in a row */
   gap: 2rem; /* Adjust the gap between buttons as needed */
 }
 
-.home-text h1{
+.home-text h1 {
   font-size: 4rem;
   font-family: cursive;
 }
@@ -42,9 +46,9 @@
   background: var(--hover);
 }
 
- /* New styles for animation */
+/* New styles for animation */
 
- .animated-text {
+.animated-text {
   overflow: hidden;
   display: inline-block;
   font-size: var(--medium-font);
