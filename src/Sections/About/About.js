@@ -3,8 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './About.css'; // Make sure to import the CSS file
 
 
-
-const About = () => {
+const About = ({ theme }) => {
   // Initialize separate state variables for each button's hover state
   // const [hoveredHTML, setHoveredHTML] = useState(false);
   const [hoveredCSS, setHoveredCSS] = useState(false);
@@ -22,13 +21,13 @@ const About = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShowPercentage(prevShowPercentage => !prevShowPercentage);
-    }, 1000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="about" id="about">
+    <section className={`about ${theme === 'dark' ? 'dark-mode' : ''}`}>
       <div className="heading">
         <h2>About Me</h2>
         <span>Introduction</span>

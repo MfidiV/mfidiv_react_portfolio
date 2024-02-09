@@ -1,3 +1,9 @@
+.about{
+  /* border: 2px solid white; */
+  background: rgba(136, 105, 153, 0.3);
+
+}
+
 .about-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -23,16 +29,23 @@
   margin-bottom: 1rem;
   color: var(--bg-color);
 }
+.container.dark .about-text p{
+  color: var(--text-color); /* Set text color to text color in dark mode */
 
-.dark-mode .about-text p {
+}
+
+.container.dark .about-text h2
+{
+  border-bottom: 3px solid var(--text-color);
   color: var(--text-color); /* Set text color to text color in dark mode */
 }
 
 .about-text h2 {
   display: inline-block;
-  border-bottom: 3px solid var(--text-color);
+  border-bottom: 3px solid var(--bg-color);
   padding-bottom: 5px;
   margin-bottom: 18px;
+  color: var(--bg-color);
 }
 
 .skill {
