@@ -1,0 +1,76 @@
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, auto));
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+.services-box {
+    padding: 60px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2.5rem;
+    background-color: var(--main-color);
+    /* border-bottom: 2px solid var(--main-color); */
+    box-shadow: 0 4px 20px rgb(14 55 54 / 15%);
+}
+.services-box:hover {
+    background-color:#656ED3;
+}
+
+
+.services-box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.7rem 0 0.4rem;
+    color: #fff;
+}
+/* .services-box:hover h3 {
+    color: #000;
+} */
+.services-box .bx {
+    padding-top: 2rem;
+    font-size: 80px;
+    color: #22cf91;
+    
+}
+/* .services-box:hover .bx {
+    color: var(--main-color);
+} */
+
+.learn-more-link {
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove default underline */
+    font-weight: bold; /* Make the text bold */
+    transition: color 0.3s; /* Smooth color transition on hover */
+    cursor: pointer;
+  }
+  
+  .learn-more-link:hover {
+    color: #0056b3; /* Darken the color on hover */
+  }
+  
+
+
+@media (max-width: 767px) {
+    .services-content {
+      grid-template-columns: 1fr; /* Display services in a single column on smaller screens */
+      gap: 2rem; /* Reduce the gap between services */
+    }
+  
+    .services-box {
+      width: 80%; /* Adjust width for better responsiveness */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .services-box {
+      padding: 40px; /* Reduce padding for better spacing on smaller screens */
+      width: 90%; /* Adjust width for better responsiveness */
+    }
+  }
