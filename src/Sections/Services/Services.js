@@ -1,5 +1,6 @@
 import React from 'react';
 import './Services.css'; 
+import 'boxicons/css/boxicons.min.css';
 
 const Services = () => {
    
