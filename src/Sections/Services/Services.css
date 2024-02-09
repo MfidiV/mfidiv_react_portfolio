@@ -61,10 +61,11 @@
     .services-content {
       grid-template-columns: 1fr; /* Display services in a single column on smaller screens */
       gap: 2rem; /* Reduce the gap between services */
+      justify-content: center;
     }
   
     .services-box {
-      width: 80%; /* Adjust width for better responsiveness */
+      width: 100%; /* Adjust width for better responsiveness */
     }
   }
   

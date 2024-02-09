@@ -87,3 +87,44 @@
     transform: translateX(0);
   }
 }
+
+@media screen and (max-width: 600px) {
+  .skill .btn {
+    width: calc(33.33% - 10px); /* Adjust width to display 3 buttons in a row with some margin */
+    margin: 5px;
+    margin-bottom: 10px;
+  }
+}
+@media(max-width:768){
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .about-img {
+    display: flex;
+    justify-content: center;
+  }
+  .skill-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap:2rem;
+    margin:5px ;
+  }
+
+  .about-img img {
+    margin-left: 0;
+    /* width: 100%; */
+  }
+}
+
+@media screen and (max-width: 380px) {
+
+  .btn1 {
+    margin-right: 2%;
+    margin-bottom: 1rem; /* Add some spacing between buttons */
+  }
+}
