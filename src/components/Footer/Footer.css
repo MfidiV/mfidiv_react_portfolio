@@ -1,0 +1,16 @@
+/* Footer styles */
+footer {
+    padding-top: 50px;
+    color: white;
+  }
+  
+  .copyright {
+    padding: 20px;
+    background: var(--main-color);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .copyright a {
+    color: #22cf91;
+  }
