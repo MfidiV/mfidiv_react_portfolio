@@ -1,0 +1,19 @@
+.toggle{
+    align-items: left;
+  }
+  .portfolio .toggle .btn1 {
+    background: var(--main-color);
+    color: #fff;
+    padding: 0.7rem 1.3rem;
+    border-radius: 4.5rem;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 1.5rem; /*!important; Use !important to override other styles if needed */
+    margin-left:50%;
+    border: 2px solid black;
+  }
+  
+  .portfolio .toggle .btn1:hover {
+    background: var(--hover);
+  }
+  
