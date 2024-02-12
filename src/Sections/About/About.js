@@ -27,7 +27,7 @@ const About = ({ theme }) => {
   }, []);
 
   return (
-    <section className={`about ${theme === 'dark' ? 'dark-mode' : ''}`}>
+    <section  className={`about ${theme === 'dark' ? 'dark-mode' : ''}`}>
       <div className="heading">
         <h2>About Me</h2>
         <span>Introduction</span>

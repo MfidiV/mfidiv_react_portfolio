@@ -18,9 +18,12 @@
     background-color: var(--main-color);
     /* border-bottom: 2px solid var(--main-color); */
     box-shadow: 0 4px 20px rgb(14 55 54 / 15%);
+    transition: 1s;
 }
+
 .services-box:hover {
     background-color:#656ED3;
+    z-index: 3;
 }
 
 

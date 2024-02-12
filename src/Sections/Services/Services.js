@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import ParallaxTilt from 'react-parallax-tilt';
 import './Services.css'; // Assuming you have a CSS file named Services.css for the styles
 import 'boxicons/css/boxicons.min.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
 
 const Services = () => {
     const [modalContent, setModalContent] = useState('');
     const [showModal, setShowModal] = useState(false);
 
-    const servicesRendered = (event, service) => {
-        event.preventDefault(); // Prevent the default form submission
+    useEffect(()=>{
+        AOS.init({duration:2000})
+    },[])
+    const servicesRendered = (service) => {
         if (service === "Backend") {
             setModalContent("Experienced back-end developer with proficiency in Python, Java, and Node.js, skilled in database management, scalable applications, server technologies, RESTful APIs, and cloud platforms. Skilled in troubleshooting, debugging, and security measures, committed to efficient, reliable solutions.");
         } else if (service === "Frontend") {
@@ -28,25 +34,25 @@ const Services = () => {
                 <h2>Services</h2>
                 <span>I offer</span>
             </div>
-            <div className="services-content">
+            <div className="services-content" data-aos="zoom-in"  >
                 {/* Box 1 */}
-                <div className="services-box">
+                <ParallaxTilt className="services-box" perspective={1000} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.1} transitionSpeed={800}>
                     <i className='bx bx-code-alt'></i>
                     <h3>Web Development</h3>
-                    <span className="learn-more-link" onClick={(event) => { event.preventDefault(); servicesRendered(event, 'Frontend'); }}>Learn more</span>
-                </div>
+                    <span className="learn-more-link" onClick={() => servicesRendered('Frontend')}>Learn more</span>
+                </ParallaxTilt>
                 {/* Box 2 */}
-                <div className="services-box">
+                <ParallaxTilt className="services-box" perspective={1000} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.1} transitionSpeed={800}>
                     <i className='bx bx-server'></i>
                     <h3>Backend Development</h3>
-                    <span className="learn-more-link" onClick={(event) => { event.preventDefault(); servicesRendered(event, 'Backend'); }}>Learn more</span>
-                </div>
+                    <span className="learn-more-link" onClick={() => servicesRendered('Backend')}>Learn more</span>
+                </ParallaxTilt>
                 {/* Box 3 */}
-                <div className="services-box">
+                <ParallaxTilt className="services-box" perspective={1000} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.1} transitionSpeed={800}>
                     <i className='bx bx-brush'></i>
                     <h3>UI/UX Design</h3>
-                    <span className="learn-more-link" onClick={(event) => { event.preventDefault(); servicesRendered(event, 'UI/UX'); }}>Learn more</span>
-                </div>
+                    <span className="learn-more-link" onClick={() => servicesRendered('UI/UX')}>Learn more</span>
+                </ParallaxTilt>
             </div>
             {showModal && (
                 <div className="modal">

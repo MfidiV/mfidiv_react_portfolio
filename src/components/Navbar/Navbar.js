@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import "./Navbar.css";
 import toggle_light from "../assets/night.png";
 import toggle_dark from "../assets/day.png";
@@ -24,11 +25,66 @@ const Navbar = ({ theme, setTheme }) => {
     <div className="navbar">
       <h1 className="logo">Vuyolwethu</h1>
       <ul className={`nav-links ${showMenu ? "show" : ""}`}>
-        <li>Home</li>
-        <li>About</li>
-        <li>Services</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
+        <li>
+          <Link
+            activeClass="active"
+            to="Home"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={0} // Set duration to 0 for immediate scroll
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={0} // Set duration to 0 for immediate scroll
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass="active"
+            to="Services"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={0} // Set duration to 0 for immediate scroll
+          >
+            Services
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass="active"
+            to="Portfolio"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={0} // Set duration to 0 for immediate scroll
+          >
+            Portfolio
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass="active"
+            to="Contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={0} // Set duration to 0 for immediate scroll
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
       <img
         onClick={toggleMode}
@@ -37,11 +93,11 @@ const Navbar = ({ theme, setTheme }) => {
         className="toggle-icon"
       />
       <img
-  src={theme === 'light' ? menu_icon_light : menu_icon_dark}
-  alt=""
-  className="menu-icon"
-  onClick={toggleMenu}
-/>
+        src={theme === "light" ? menu_icon_light : menu_icon_dark}
+        alt=""
+        className="menu-icon"
+        onClick={toggleMenu}
+      />
     </div>
   );
 };
