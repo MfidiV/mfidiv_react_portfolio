@@ -1,0 +1,39 @@
+
+.scroll-up-button {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 80px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  .scroll-up-button:hover .scroll-up-text::before {
+    content: "Scroll Up";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0.9;
+    white-space: nowrap;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
