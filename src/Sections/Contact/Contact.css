@@ -1,0 +1,78 @@
+.contact-container {
+
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(136, 105, 153, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+  }
+  
+  .social-icons {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-icons > svg {
+    margin-right: 10px;
+    font-size: 30px;
+    color: #555;
+  }
+  
+  form {
+    margin-bottom: 20px;
+    width: 100%; /* Set width for the form controls */
+    max-width: 600px; /* Set maximum width for better layout */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+  .form-group{
+    margin-bottom: 15px;
+    width: 100%; /* Set width for the form controls */
+    max-width: 400px; /* Set maximum width for better layout */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .form-control {
+    width: 100%; /* Set width to fill the parent container */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  .error-message{
+    color: var(--bg-color);
+  }
+
+  .container.dark .error-message
+{
+  
+  color: var(--text-color);
+}
+
+  
