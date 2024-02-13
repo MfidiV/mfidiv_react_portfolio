@@ -5,6 +5,8 @@ import toggle_light from "../assets/night.png";
 import toggle_dark from "../assets/day.png";
 import menu_icon_light from "../assets/menu_icon-light.png";
 import menu_icon_dark from "../assets/menu-icon-dark.png";
+import logo_light from '../assets/Logo/logo_l.png';
+import logo_dark from '../assets/Logo/logo_d.png';
 
 const Navbar = ({ theme, setTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -23,7 +25,12 @@ const Navbar = ({ theme, setTheme }) => {
 
   return (
     <div className="navbar">
-      <h1 className="logo">Vuyolwethu</h1>
+      <div className="Logo">
+        <img
+          src={theme === "light" ?  logo_light : logo_dark}
+          alt=""
+      />
+    </div>
       <div className="nav-b">
       <ul className={`nav-links ${showMenu ? "show" : ""}`}>
         <li>
