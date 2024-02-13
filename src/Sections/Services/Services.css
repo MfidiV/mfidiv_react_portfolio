@@ -22,7 +22,7 @@
 }
 
 .services-box:hover {
-    background-color:#656ED3;
+    background-color:var(--hover);
     z-index: 3;
 }
 
