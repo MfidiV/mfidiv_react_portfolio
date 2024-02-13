@@ -30,6 +30,7 @@ section {
   min-height: 100vh;
   background: var(--text-color);
   transition: 0.5s;
+  max-width: 100%;
 }
 
 .container.dark {

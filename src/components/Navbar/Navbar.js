@@ -24,6 +24,7 @@ const Navbar = ({ theme, setTheme }) => {
   return (
     <div className="navbar">
       <h1 className="logo">Vuyolwethu</h1>
+      <div className="nav-b">
       <ul className={`nav-links ${showMenu ? "show" : ""}`}>
         <li>
           <Link
@@ -98,6 +99,8 @@ const Navbar = ({ theme, setTheme }) => {
         className="menu-icon"
         onClick={toggleMenu}
       />
+      </div> 
+      
     </div>
   );
 };
