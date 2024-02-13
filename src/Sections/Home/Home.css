@@ -40,10 +40,12 @@
   border-radius: 0.5rem;
   text-decoration: none; /* Remove underline */
   text-align: center;
+  transition: all 0.3s ease
 }
 
 .btn1:hover {
   background: var(--hover);
+  transform: scale(1.1);
 }
 
 /* New styles for animation */
