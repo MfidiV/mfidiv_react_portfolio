@@ -36,7 +36,7 @@ const Navbar = ({ theme, setTheme }) => {
         <li>
           <Link
             activeClass="active"
-            to="Home"
+            to="home"
             spy={true}
             smooth={true}
             offset={-70}
@@ -84,7 +84,7 @@ const Navbar = ({ theme, setTheme }) => {
         <li>
           <Link
             activeClass="active"
-            to="Contact"
+            to="contact-container"
             spy={true}
             smooth={true}
             offset={-70}
