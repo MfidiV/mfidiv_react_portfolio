@@ -14,7 +14,7 @@
   box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
 }
 .Logo {
-  margin: 0 30px; /* Adjust margin as needed */
+  margin: 0 70px; /* Adjust margin as needed */
 }
 
 .Logo img {
@@ -76,13 +76,12 @@
   
     .navbar {
       position: flex; /* Ensure relative positioning for absolute children */
-      /* border-radius: 30px; */
 
 
     }
   
-    .logo {
-      margin: 30px 0; /* Adjust margin to make space for the toggle-icon */
+    .Logo {
+      margin: 20px 20px; /* Adjust margin to make space for the toggle-icon */
     }
   
     .nav-b {
