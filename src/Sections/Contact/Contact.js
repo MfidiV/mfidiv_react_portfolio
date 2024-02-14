@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import './Contact.css'; // Import CSS file for styling
 import emailjs from 'emailjs-com';
 import { Alert } from 'react-bootstrap'; // Import Alert component from react-bootstrap
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,9 @@ function Contact() {
     email: '',
     message: ''
   });
+  const onChange = () =>{
+
+  }
   const [errorMessage, setErrorMessage] = useState('');
   const [showAlert, setShowAlert] = useState(false); // State to control whether to show alert or not
 
@@ -70,7 +74,7 @@ function Contact() {
 
 
   return (
-    <div className="contact-container">
+    <div className="contact-container" id='contact-container'>
       <div className="heading">
         <h2>Contact </h2>
         <span>Get in touch</span>
@@ -111,9 +115,13 @@ function Contact() {
             className="form-control"
           />
         </div>
-
+    
         {showAlert && <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible>{errorMessage}</Alert>}
         <div className="form-group">
+          <ReCAPTCHA
+            sitekey="6LeuYHIpAAAAADY0i14Bn22sXmzCS4HJRLrc4yYK"
+            onChange={onChange}
+          />
           <button type="submit" className="btn btn-primary">Send</button>
         </div>
       </form>

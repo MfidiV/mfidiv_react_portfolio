@@ -9,6 +9,13 @@ const Home = ({ theme }) => {
     window.open(pdfPath, '_blank');
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact-container');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(()=>{
     AOS.init({duration:2000})
 },[])
@@ -34,7 +41,8 @@ const Home = ({ theme }) => {
         <button className="btn1" onClick={openPDF}>
           Download CV
         </button>
-        <button className="btn1" onClick={() => window.location.href = "#contact"}>
+      
+        <button className="btn1" onClick={scrollToContact}>
           Contact Me
         </button>
       </div>

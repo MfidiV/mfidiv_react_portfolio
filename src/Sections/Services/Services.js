@@ -48,7 +48,7 @@ const Services = () => {
                     <span className="learn-more-link" onClick={() => servicesRendered('Backend')}>Learn more</span>
                 </ParallaxTilt>
                 {/* Box 3 */}
-                <ParallaxTilt className="services-box" perspective={1000} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.1} transitionSpeed={800}>
+                <ParallaxTilt className="services-box" perspectkljjive={1000} tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.1} transitionSpeed={800}>
                     <i className='bx bx-brush'></i>
                     <h3>UI/UX Design</h3>
                     <span className="learn-more-link" onClick={() => servicesRendered('UI/UX')}>Learn more</span>
