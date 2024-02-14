@@ -1,14 +1,14 @@
-.navbar {
-  position:static;
-  z-index: 1000;
+.nav-bar {
+  position:fixed;
+  z-index: 1;
   top: 0;
   right: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background: #fff; */
-  padding: 15px 20%;
+  /* background:lightblue; */
+  padding: 15px -1;
   transition: 0.5s;
   /* margin: 20px; */
   box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);

@@ -24,7 +24,7 @@ const Navbar = ({ theme, setTheme }) => {
   };
 
   return (
-    <div className="navbar">
+    <div className="nav-bar">
       <div className="Logo">
         <img
           src={theme === "light" ?  logo_light : logo_dark}
