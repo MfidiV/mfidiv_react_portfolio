@@ -22,6 +22,7 @@ const Home = ({ theme }) => {
 
   return (
     <section className={`home ${theme === 'dark' ? 'dark-mode' : ''}`}>
+      <div className="hero-image"> </div>
       <div className="home-text">
         <span className="animated-text" data-aos="fade-right">
           <span>H</span>

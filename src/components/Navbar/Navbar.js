@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
 import toggle_light from "../assets/night.png";
@@ -10,6 +10,7 @@ import logo_dark from '../assets/Logo/logo_d.png';
 
 const Navbar = ({ theme, setTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -23,8 +24,24 @@ const Navbar = ({ theme, setTheme }) => {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="nav-bar">
+    <div className={`nav-bar ${scrolling ? "scrolled" : ""}`}>
       <div className="Logo">
         <img
           src={theme === "light" ?  logo_light : logo_dark}

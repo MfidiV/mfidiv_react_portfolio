@@ -61,6 +61,11 @@ form {
 textarea.form-control {
   min-height: 100px;
 }
+.Last-step{
+  display: flex;
+  justify-content: center;
+
+}
 
 .btn {
   padding: 10px 20px;

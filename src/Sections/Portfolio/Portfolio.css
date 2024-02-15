@@ -9,8 +9,7 @@
     text-decoration: none;
     text-align: center;
     margin-top: 1.5rem; /*!important; Use !important to override other styles if needed */
-    margin-left:50%;
-    border: 2px solid black;
+    margin-left:75%;
   }
   
   .portfolio .toggle .btn1:hover {

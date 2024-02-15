@@ -1,7 +1,7 @@
 .services-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, auto));
+   display: flex;
     justify-content: center;
+    align-items: center;
     gap: 4rem;
     margin-top: 2rem;
 }
@@ -62,7 +62,8 @@
 
 @media (max-width: 767px) {
     .services-content {
-      grid-template-columns: 1fr; /* Display services in a single column on smaller screens */
+      display: fle;
+      flex-direction: column;
       gap: 2rem; /* Reduce the gap between services */
       justify-content: center;
     }

@@ -141,12 +141,12 @@ function Contact() {
 
         {showAlert && <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible>{errorMessage}</Alert>}
         {showModal && <Modal message={modalMessage} onClose={() => setShowModal(false)} />}
-        <div className="form-group">
+        <div className="Last-step">
           <ReCAPTCHA
             sitekey="6LeuYHIpAAAAADY0i14Bn22sXmzCS4HJRLrc4yYK"
             onChange={handleRecaptchaChange}
           />
-          <button type="submit" className="btn btn-primary">Send</button>
+          <button type="submit" className="btn1">Send</button>
         </div>
       </form>
     </div>

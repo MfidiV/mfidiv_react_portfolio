@@ -29,6 +29,9 @@
   cursor: pointer;
   
 }
+.scrolled {
+  background-color: #80b9ca; /* Change to your desired background color for scrolled state */
+}
 .nav-b{
   display: flex;
   margin-right: 80px;
