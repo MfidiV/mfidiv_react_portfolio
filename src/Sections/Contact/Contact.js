@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {faAccessibleIcon, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import './Contact.css'; // Import CSS file for styling
 import emailjs from 'emailjs-com';
 import { Alert } from 'react-bootstrap'; // Import Alert component from react-bootstrap
@@ -103,9 +103,8 @@ function Contact() {
         <span>Get in touch</span>
       </div>
       <div className="social-icons">
-        <FontAwesomeIcon icon={faFacebook} />
-        <FontAwesomeIcon icon={faTwitter} />
-        <FontAwesomeIcon icon={faInstagram} />
+        <FontAwesomeIcon icon={faGithub} />
+        <FontAwesomeIcon icon={faAccessibleIcon} />
         <FontAwesomeIcon icon={faLinkedin} />
       </div>
       <form onSubmit={handleSubmit}>

@@ -1,7 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './About.css'; // Make sure to import the CSS file
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const About = ({ theme }) => {
   // Initialize separate state variables for each button's hover state
@@ -32,6 +33,9 @@ const About = ({ theme }) => {
         <h2>About Me</h2>
         <span>Introduction</span>
       </div>
+
+      <p>I am a highly motivated Software Developer with knowledge in design, installation, testing and maintenance of software systems. Seeking a position where 
+        I can leverage my skills to contribute to innovative software solutions and enhance team productivity</p>
       {/* About Content */}
       <div className="about-container">
         <div className="about-img">

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fa, faEdge, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEdge, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 // Import images
 import blogImage from '../../components/assets/Portfolio/blog-6.jpg';
@@ -74,7 +74,7 @@ const Portfolio = () => {
             </div>
             
             <div className="row" id="row1"  style={{ display: showRow1 ? 'flex' : 'none' }}>
-                <div className="col-lg-4 mt-4">
+                <div className="col-lg-4 mt-4"  data-aos="fade-down">
                     <div className="card portfolioContent">
                         <img className="card-img-top" src={chatAppImage} alt="Chat app logo" style={{ width: '100%' }} />
                         <div className="card-body">
@@ -87,7 +87,7 @@ const Portfolio = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-4 mt-4">
+                <div className="col-lg-4 mt-4"  data-aos="fade-down">
                     <div className="card portfolioContent">
                         <img className="card-img-top" src={weatherImage} alt="Weather app logo" style={{ width: '100%' }} />
                         <div className="card-body">
@@ -100,7 +100,7 @@ const Portfolio = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-4 mt-4" >
+                <div className="col-lg-4 mt-4"  data-aos="fade-down">
                     <div className="card portfolioContent">
                         <img className="card-img-top" src={bankAppImage} alt="Bank app logo" style={{ width: '100%' }} />
                         <div className="card-body">
