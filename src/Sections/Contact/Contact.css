@@ -2,12 +2,11 @@
   margin: 0px auto;
   padding: 20px;
   border-radius: 5px;
-  background-color: rgba(136, 105, 153, 0.3);
+  /* background-color: rgba(136, 105, 153, 0.3); */
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Center items horizontally */
+  flex-direction: column;  align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
-  max-width: 700px;
+
 }
 
 #messageBox{
@@ -19,6 +18,12 @@
 
 }
 
+.contact {
+  background-color: rgba(136, 105, 153, 0.3);
+  max-width: 800px; /* Adjust the max-width to your desired size */
+  margin: 0 auto; /* Center the contact div horizontally */
+  padding:0 80px; /* Add padding for spacing */
+}
 
 .social-icons {
   margin: 15px;

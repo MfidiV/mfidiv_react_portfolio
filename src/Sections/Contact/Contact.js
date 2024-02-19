@@ -107,6 +107,7 @@ function Contact() {
         <h2>Contact </h2>
         <span>Get in touch</span>
       </div>
+      <div className='contact'>
       <div className="social-icons">
       <a href="https://github.com/MfidiV"><FontAwesomeIcon icon={faGithub} /></a>
       <a href={mapUrl}><FontAwesomeIcon icon={faMapMarkerAlt} /></a>
@@ -153,6 +154,7 @@ function Contact() {
           <button type="submit" className="btn"> <FontAwesomeIcon icon={faPaperPlane} /></button>
         </div>
       </form>
+      </div>
     </div>
   );
 }
