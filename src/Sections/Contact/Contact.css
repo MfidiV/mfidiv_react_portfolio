@@ -21,13 +21,13 @@
 
 
 .social-icons {
-  margin: 20px;
+  margin: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.social-icons > svg {
+.social-icons > a {
   margin-right: 10px;
   font-size: 30px;
   color:#007bff;
@@ -64,6 +64,7 @@ textarea.form-control {
 .Last-step{
   display: flex;
   justify-content: center;
+  gap: 1.1rem;
 
 }
 

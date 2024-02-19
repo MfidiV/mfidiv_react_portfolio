@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faAccessibleIcon, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faMapMarkerAlt, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+
 import './Contact.css'; // Import CSS file for styling
 import emailjs from 'emailjs-com';
 import { Alert } from 'react-bootstrap'; // Import Alert component from react-bootstrap
@@ -16,6 +18,10 @@ function Modal({ message, onClose }) {
     </div>
   );
 }
+
+const mappedAddress = encodeURIComponent('Cape Town');
+// Constructing the Google Maps URL with the mapped address
+const mapUrl = `https://www.google.com/maps/search/?api=1&query=${mappedAddress}`;
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -67,7 +73,6 @@ function Contact() {
       return;
     }
 
-    // Add your logic to send the form data
     console.log('Form submitted:', formData);
     // Send email using EmailJS
     const templateParams = {
@@ -103,10 +108,10 @@ function Contact() {
         <span>Get in touch</span>
       </div>
       <div className="social-icons">
-        <FontAwesomeIcon icon={faGithub} />
-        <FontAwesomeIcon icon={faAccessibleIcon} />
-        <FontAwesomeIcon icon={faLinkedin} />
-      </div>
+      <a href="https://github.com/MfidiV"><FontAwesomeIcon icon={faGithub} /></a>
+      <a href={mapUrl}><FontAwesomeIcon icon={faMapMarkerAlt} /></a>
+      <a href="https://www.linkedin.com/in/mfidi-vuyolwethu-577b3ba1/"><FontAwesomeIcon icon={faLinkedin} /></a>
+    </div>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <input
@@ -145,7 +150,7 @@ function Contact() {
             sitekey="6LeuYHIpAAAAADY0i14Bn22sXmzCS4HJRLrc4yYK"
             onChange={handleRecaptchaChange}
           />
-          <button type="submit" className="btn1">Send</button>
+          <button type="submit" className="btn"> <FontAwesomeIcon icon={faPaperPlane} /></button>
         </div>
       </form>
     </div>
