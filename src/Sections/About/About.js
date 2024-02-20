@@ -1,8 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './About.css'; // Make sure to import the CSS file
-import AOS from 'aos';
-import 'aos/dist/aos.css'
+// import AOS from 'aos';
+// import 'aos/dist/aos.css'
 
 const About = ({ theme }) => {
   // Initialize separate state variables for each button's hover state
