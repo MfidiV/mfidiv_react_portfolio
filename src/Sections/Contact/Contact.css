@@ -2,27 +2,17 @@
   margin: 0px auto;
   padding: 20px;
   border-radius: 5px;
-  /* background-color: rgba(136, 105, 153, 0.3); */
   display: flex;
-  flex-direction: column;  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-
-}
-
-#messageBox{
-  width: 50%;
-}
-
-.custom-reCaptcha {
-  margin-top: 10px;
-
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact {
   background-color: rgba(136, 105, 153, 0.3);
-  max-width: 800px; /* Adjust the max-width to your desired size */
-  margin: 0 auto; /* Center the contact div horizontally */
-  padding:0 80px; /* Add padding for spacing */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 80px; /* Adjust padding for smaller screens */
 }
 
 .social-icons {
@@ -35,28 +25,28 @@
 .social-icons > a {
   margin-right: 10px;
   font-size: 30px;
-  color:#007bff;
+  color: #007bff;
 }
 
 form {
   margin-bottom: 20px;
-  width: 100%; /* Set width for the form controls */
-  max-width: 400px; /* Set maximum width for better layout */
+  width: 100%;
+  max-width: 400px;
   display: flex;
-  flex-direction: column; /* Align items vertically */
-  align-items: center; /* Center items horizontally */
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-group {
   margin-bottom: 15px;
-  width: 100%; /* Set width for the form controls */
+  width: 100%;
   display: flex;
-  flex-direction: column; /* Align items vertically */
-  align-items: center; /* Center items horizontally */
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-control {
-  width: 100%; /* Set width to fill the parent container */
+  width: 100%;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -66,11 +56,11 @@ form {
 textarea.form-control {
   min-height: 100px;
 }
-.Last-step{
+
+.Last-step {
   display: flex;
   justify-content: center;
   gap: 1.1rem;
-
 }
 
 .btn {
@@ -81,19 +71,30 @@ textarea.form-control {
   cursor: pointer;
 }
 
-.btn-primary {
-  background-color: #007bff;
-  color: #fff;
-}
+@media screen and (max-width: 600px) {
+  .contact {
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
 
-.btn-primary:hover {
-  background-color: #0056b3;
-}
+  .social-icons {
+    margin: 10px;
+  }
 
-.error-message {
-  color: var(--bg-color);
-}
+  .social-icons > a {
+    font-size: 24px;
+  }
 
-.container.dark .error-message {
-  color: var(--text-color);
+  .form-control {
+    font-size: 14px;
+  }
+
+  textarea.form-control {
+    min-height: 80px;
+  }
+  .Last-step {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
 }
