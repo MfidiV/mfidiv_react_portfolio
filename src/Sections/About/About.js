@@ -34,8 +34,6 @@ const About = ({ theme }) => {
         <span>Introduction</span>
       </div>
 
-      <p>I am a highly motivated Software Developer with knowledge in design, installation, testing and maintenance of software systems. Seeking a position where 
-        I can leverage my skills to contribute to innovative software solutions and enhance team productivity</p>
       {/* About Content */}
       <div className="about-container">
         <div className="about-img">
@@ -43,7 +41,13 @@ const About = ({ theme }) => {
         </div>
         <div className="about-text">
           <p>
-            I studied Software development at the Walter Sisulu University in the Eastern Cape. I am a keen, hardworking, reliable, and excellent timekeeper, bright and receptive person, able to communicate well with people at all levels. I am good at working using my own initiative and I am flexible in my approach to work duties. I have a good sense of humor and a pleasant approach.
+            
+Highly motivated Software Developer with expertise in design, installation, testing, and maintenance of software systems.
+Graduated from Walter Sisulu University in the Eastern Cape with a focus on Software Development.
+Keen, hardworking, reliable, and excellent timekeeper.
+Bright, receptive, and skilled in communication at all levels.
+Proven ability to work independently and adaptably, with a strong sense of initiative.
+Possesses a good sense of humor and a pleasant demeanor, enhancing team dynamics and collaboration.
           </p>
 
           <h2>My skills</h2>

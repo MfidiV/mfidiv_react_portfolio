@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faMapMarkerAlt, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-
-import './Contact.css'; // Import CSS file for styling
+import './Contact.css';
 import emailjs from 'emailjs-com';
-import { Alert } from 'react-bootstrap'; // Import Alert component from react-bootstrap
+import { Alert } from 'react-bootstrap';
 import ReCAPTCHA from "react-google-recaptcha";
 
 function Modal({ message, onClose }) {
@@ -20,20 +19,20 @@ function Modal({ message, onClose }) {
 }
 
 const mappedAddress = encodeURIComponent('Cape Town');
-// Constructing the Google Maps URL with the mapped address
 const mapUrl = `https://www.google.com/maps/search/?api=1&query=${mappedAddress}`;
 
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    subject: '' // Add subject field to the form data
   });
   const [errorMessage, setErrorMessage] = useState('');
-  const [showAlert, setShowAlert] = useState(false); // State to control whether to show alert or not
-  const [recaptchaVerified, setRecaptchaVerified] = useState(false); // State to track ReCAPTCHA verification
-  const [showModal, setShowModal] = useState(false); // State to control whether to show modal or not
-  const [modalMessage, setModalMessage] = useState(''); // Message to be displayed in modal
+  const [showAlert, setShowAlert] = useState(false);
+  const [recaptchaVerified, setRecaptchaVerified] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState('');
 
   const handleChange = (e) => {
     setFormData({
@@ -43,61 +42,58 @@ function Contact() {
   };
 
   const handleRecaptchaChange = (token) => {
-    // You can handle the ReCAPTCHA token here if needed
     setRecaptchaVerified(true);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check if ReCAPTCHA is verified
     if (!recaptchaVerified) {
       setErrorMessage('Please complete the ReCAPTCHA');
-      setShowAlert(true); // Show alert
+      setShowAlert(true);
       return;
     }
 
-    // Validation
-    const { name, email, message } = formData;
-    if (!name || !email || !message) {
+    const { name, email, message, subject } = formData;
+    if (!name || !email || !message || !subject) {
       setErrorMessage('All fields must be filled out');
-      setShowAlert(true); // Show alert
+      setShowAlert(true);
       return;
     }
 
-    // Email validation using a simple regular expression
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setErrorMessage('Please enter a valid email address');
-      setShowAlert(true); // Show alert
+      setShowAlert(true);
       return;
     }
 
     console.log('Form submitted:', formData);
-    // Send email using EmailJS
+
     const templateParams = {
       from_name: name,
       from_email: email,
-      message: message
+      message: message,
+      subject: subject // Include subject in the template parameters
     };
 
     emailjs.send("service_rjz6n3a", "template_oano9bq", templateParams, '9oU1xzcLnNXGvUlQv')
       .then((response) => {
         console.log('Email sent successfully:', response);
-        // Clear the form fields after successful submission
         setFormData({
           name: '',
           email: '',
-          message: ''
+          message: '',
+          subject: '' // Clear subject field after successful submission
         });
         setErrorMessage('');
-        setShowModal(true); // Show modal
+        setShowModal(true);
         setModalMessage('Email sent successfully');
       })
       .catch((error) => {
         console.error('Error sending email:', error);
         setErrorMessage('Failed to send email. Please try again later.');
-        setShowAlert(true); // Show alert
+        setShowAlert(true);
       });
   };
 
@@ -108,52 +104,80 @@ function Contact() {
         <span>Get in touch</span>
       </div>
       <div className='contact'>
-      <div className="social-icons">
-      <a href="https://github.com/MfidiV"><FontAwesomeIcon icon={faGithub} /></a>
-      <a href={mapUrl}><FontAwesomeIcon icon={faMapMarkerAlt} /></a>
-      <a href="https://www.linkedin.com/in/mfidi-vuyolwethu-577b3ba1/"><FontAwesomeIcon icon={faLinkedin} /></a>
+        <div className="social-icons">
+          <a href="https://github.com/MfidiV"><FontAwesomeIcon icon={faGithub} /></a>
+          <a href={mapUrl}><FontAwesomeIcon icon={faMapMarkerAlt} /></a>
+          <a href="https://www.linkedin.com/in/mfidi-vuyolwethu-577b3ba1/"><FontAwesomeIcon icon={faLinkedin} /></a>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              className="form-control"
+              id='text_name'
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              className="form-control"
+              id='email_details'
+            />
+          </div>
+          <div className="form-group">
+  <div className="select-wrapper">
+    <select
+      name="subject"
+      value={formData.subject}
+      onChange={handleChange}
+      className="form-control"
+      id='subject_dropdown'
+    >
+      <option value="">Select Subject</option>
+      <option value="General Inquiry">General Inquiry</option>
+      <option value="Collaboration">Collaboration</option>
+      <option value="Job/Career growth">Job/Career growth</option>
+      {/* Add more options as needed */}
+    </select>
+    <div className="arrow-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-down">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
     </div>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="form-control" id='text_name'
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="form-control" id='email_details'
-          />
-        </div>
-        <div className="form-group">
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            className="form-control" id='messagebox'
-          />
-        </div>
+  </div>
+</div>
 
-        {showAlert && <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible>{errorMessage}</Alert>}
-        {showModal && <Modal message={modalMessage} onClose={() => setShowModal(false)} />}
-        <div className="Last-step">
-          <ReCAPTCHA
-            sitekey="6LeuYHIpAAAAADY0i14Bn22sXmzCS4HJRLrc4yYK"
-            onChange={handleRecaptchaChange}
-          />
-          <button type="submit" className="btn"> <FontAwesomeIcon icon={faPaperPlane} /></button>
-        </div>
-      </form>
+          <div className="form-group">
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              className="form-control"
+              id='messagebox'
+            />
+          </div>
+          
+          {showAlert && <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible>{errorMessage}</Alert>}
+          {showModal && <Modal message={modalMessage} onClose={() => setShowModal(false)} />}
+          <div className="Last-step">
+            <ReCAPTCHA
+              sitekey="6LeuYHIpAAAAADY0i14Bn22sXmzCS4HJRLrc4yYK"
+              onChange={handleRecaptchaChange}
+              // size="compact"
+              // explicit
+            />
+            <button type="submit" className="btn"> <FontAwesomeIcon icon={faPaperPlane} /></button>
+          </div>
+        </form>
       </div>
     </div>
   );

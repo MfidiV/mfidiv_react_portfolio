@@ -17,7 +17,7 @@ import bankAppImage from '../../components/assets/Portfolio/pexels-obsahovka-obs
 const Portfolio = () => {
 
     useEffect(()=>{
-        AOS.init({duration:900})
+        AOS.init({duration:1000})
     },[])
 
     const [showRow1, setShowRow1] = useState(true);

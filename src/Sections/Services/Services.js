@@ -11,7 +11,7 @@ const Services = () => {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(()=>{
-        AOS.init({duration:2000})
+        AOS.init({duration:1000})
     },[])
     const servicesRendered = (service) => {
         if (service === "Backend") {

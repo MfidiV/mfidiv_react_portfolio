@@ -57,6 +57,10 @@ textarea.form-control {
   min-height: 100px;
 }
 
+input{
+  height: 32px;
+}
+
 .Last-step {
   display: flex;
   justify-content: center;
@@ -70,6 +74,33 @@ textarea.form-control {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding-right: 30px; /* Adjust according to the size of the arrow icon */
+}
+
+.arrow-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the position of the arrow icon */
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.arrow-icon svg {
+  width: 20px; /* Adjust the size of the arrow icon */
+  height: auto;
+}
+
 
 @media screen and (max-width: 600px) {
   .contact {
