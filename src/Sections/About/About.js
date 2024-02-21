@@ -1,8 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './About.css'; // Make sure to import the CSS file
-// import AOS from 'aos';
-// import 'aos/dist/aos.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const About = ({ theme }) => {
   // Initialize separate state variables for each button's hover state
@@ -18,6 +18,10 @@ const About = ({ theme }) => {
 
    // Initialize state variable for JavaScript button text
   const [showPercentage, setShowPercentage] = useState(true);
+
+  useEffect(()=>{
+    AOS.init({duration:1000})
+  },[])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,23 +40,22 @@ const About = ({ theme }) => {
 
       {/* About Content */}
       <div className="about-container">
-        <div className="about-img">
+        <div className="about-img" data-aos="fade-right">
           <img src="/Images/about-1.jpg" alt="" />
         </div>
         <div className="about-text">
-          <p>
-            
-Highly motivated Software Developer with expertise in design, installation, testing, and maintenance of software systems.
-Graduated from Walter Sisulu University in the Eastern Cape with a focus on Software Development.
-Keen, hardworking, reliable, and excellent timekeeper.
-Bright, receptive, and skilled in communication at all levels.
-Proven ability to work independently and adaptably, with a strong sense of initiative.
-Possesses a good sense of humor and a pleasant demeanor, enhancing team dynamics and collaboration.
+          <p data-aos="fade-left">            
+            Highly motivated Software Developer with expertise in design, installation, testing, and maintenance of software systems.
+            Graduated from Walter Sisulu University in the Eastern Cape with a focus on Software Development.
+            Keen, hardworking, reliable, and excellent timekeeper.
+            Bright, receptive, and skilled in communication at all levels.
+            Proven ability to work independently and adaptably, with a strong sense of initiative.
+            Possesses a good sense of humor and a pleasant demeanor, enhancing team dynamics and collaboration.
           </p>
 
           <h2>My skills</h2>
           {/* Box 2 */}
-          <div className="skills-container">
+          <div className="skills-container" data-aos="fade-left">
             <div className="skill">
               {/* Handle hover state individually for each button */}
               <button

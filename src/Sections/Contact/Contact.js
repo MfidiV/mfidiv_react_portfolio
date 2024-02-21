@@ -169,13 +169,13 @@ function Contact() {
           {showAlert && <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible>{errorMessage}</Alert>}
           {showModal && <Modal message={modalMessage} onClose={() => setShowModal(false)} />}
           <div className="Last-step">
-            <ReCAPTCHA
+            <ReCAPTCHA className='recap'
               sitekey="6LeuYHIpAAAAADY0i14Bn22sXmzCS4HJRLrc4yYK"
               onChange={handleRecaptchaChange}
               // size="compact"
               // explicit
             />
-            <button type="submit" className="btn"> <FontAwesomeIcon icon={faPaperPlane} /></button>
+            <button type="submit" className="btn1"> <FontAwesomeIcon icon={faPaperPlane} /></button>
           </div>
         </form>
       </div>

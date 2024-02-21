@@ -67,7 +67,11 @@ input{
   gap: 1.1rem;
 }
 
-.btn {
+.Last-step .g-recaptcha {
+  width: 20px; /* Adjust the width as needed */
+}
+
+.last-step .btn1 {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
