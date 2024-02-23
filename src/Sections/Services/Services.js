@@ -19,7 +19,7 @@ const Services = () => {
         } else if (service === "Frontend") {
             setModalContent("A dedicated front-end developer with expertise in HTML, CSS, JavaScript, popular frameworks like React and Angular, adept at creating visually appealing user interfaces, optimizing web performance, and staying current with design trends, adept at working collaboratively in cross-functional teams.");
         } else {
-            setModalContent("The designer is a detail-oriented UI/UX professional with a keen eye for aesthetics and user-centric design principles. They specialize in transforming complex concepts into intuitive, visually appealing interfaces. They are committed to staying updated with industry trends and technologies, ensuring their work remains at the forefront of modern design practice");
+            setModalContent("The designer is a detail-oriented UI/UX professional, specializing transforming complex concepts into intuitive, visually appealing interfaces. They are committed to staying updated with industry trends and technologies, ensuring their work remains at the forefront of modern design practice");
         }
         setShowModal(true);
     };

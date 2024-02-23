@@ -169,8 +169,8 @@ function Contact() {
           {showAlert && <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible>{errorMessage}</Alert>}
           {showModal && <Modal message={modalMessage} onClose={() => setShowModal(false)} />}
           <div className="Last-step">
-            <ReCAPTCHA className='recap'
-              sitekey="6LeuYHIpAAAAADY0i14Bn22sXmzCS4HJRLrc4yYK"
+            <ReCAPTCHA 
+              sitekey="6LfRFnApAAAAAOU7KQ-o7Tn1I4unb4wsFA1FZknS"
               onChange={handleRecaptchaChange}
               // size="compact"
               // explicit

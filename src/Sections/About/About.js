@@ -44,7 +44,7 @@ const About = ({ theme }) => {
           <img src="/Images/about-1.jpg" alt="" />
         </div>
         <div className="about-text">
-          <p data-aos="fade-left">            
+          <p data-aos="fade-up">            
             Highly motivated Software Developer with expertise in design, installation, testing, and maintenance of software systems.
             Graduated from Walter Sisulu University in the Eastern Cape with a focus on Software Development.
             Keen, hardworking, reliable, and excellent timekeeper.
@@ -55,7 +55,7 @@ const About = ({ theme }) => {
 
           <h2>My skills</h2>
           {/* Box 2 */}
-          <div className="skills-container" data-aos="fade-left">
+          <div className="skills-container" data-aos="fade-up">
             <div className="skill">
               {/* Handle hover state individually for each button */}
               <button

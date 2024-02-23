@@ -148,7 +148,10 @@
   }
   .about-img img {
     margin-left: 0;
-    /* width: 100%; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -158,12 +161,6 @@
     margin-right: 2%;
     margin-bottom: 1rem; /* Add some spacing between buttons */
   }
+ 
 }
 
-@media screen and (max-width: 380px) {
-
-  .btn1 {
-    margin-right: 2%;
-    margin-bottom: 1rem; /* Add some spacing between buttons */
-  }
-}

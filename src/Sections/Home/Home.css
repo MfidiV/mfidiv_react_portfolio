@@ -90,3 +90,24 @@
     transform: translateY(-10px);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .home-text h1 {
+    font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+
+  .home-buttons {
+    flex-direction: row; /* Revert buttons to display in a row for smaller screens */
+  }
+
+  .btn1 {
+    padding: 0.5rem 1rem; /* Adjust button padding for smaller screens */
+  }
+}
+@media screen and (max-width: 320x) {
+  
+  .btn1 {
+    padding: 0.5rem 1rem;
+    font-size:12px ;
+  }
+}

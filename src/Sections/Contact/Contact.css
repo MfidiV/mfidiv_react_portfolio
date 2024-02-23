@@ -126,10 +126,62 @@ input{
   textarea.form-control {
     min-height: 80px;
   }
+
   .Last-step {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 1.1rem;
+    align-items: center; /* Center align items */
+    gap: 10px; /* Increase gap between items */
+  }
+
+  .Last-step .g-recaptcha {
+    width: auto; /* Adjust width to auto */
+  }
+
+  .last-step .btn1 {
+    padding: 10px 20px; /* Adjust button padding */
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 375px) {
+  .contact {
+    width: 100%;
+    padding: 0 5px; /* Adjust padding for smaller screens */
+  }
+
+  .social-icons {
+    margin: 5px;
+  }
+
+  .social-icons > a {
+    font-size: 20px;
+  }
+
+  .form-control {
+    font-size: 12px;
+  }
+
+  textarea.form-control {
+    min-height: 60px;
+  }
+
+  .Last-step {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.8rem; /* Adjust gap for smaller screens */
+  }
+
+  .Last-step .g-recaptcha {
+    width: 16px; /* Adjust the width of the reCAPTCHA for smaller screens */
+  }
+  .recap iframe {
+      border: 0;
+      width: 70%;
+      margin-left: 45px;
   }
 }

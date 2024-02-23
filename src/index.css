@@ -77,7 +77,7 @@ a {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
-  max-width: 40%; /* Limit the maximum width of the modal content */
+  max-width: 80%; /* Limit the maximum width of the modal content */
   align-items: center;
   
 }
