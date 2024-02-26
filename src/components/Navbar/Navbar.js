@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
 import toggle_light from "../assets/night.png";
@@ -9,13 +9,16 @@ import logo_light from '../assets/Logo/logo_l.png';
 import logo_dark from '../assets/Logo/logo_d.png';
 
 const Navbar = ({ theme, setTheme }) => {
-  const [showMenu, setShowMenu] = useState(false);
-  const [scrolling, setScrolling] = useState(false);
+  // State variables
+  const [showMenu, setShowMenu] = useState(false); // Manages the visibility of the menu
+  const [scrolling, setScrolling] = useState(false); // Tracks whether the user is scrolling
 
+  // Function to toggle the menu visibility
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
+  // Function to toggle between light and dark themes
   const toggleMode = () => {
     if (theme === "light") {
       setTheme("dark");
@@ -24,6 +27,7 @@ const Navbar = ({ theme, setTheme }) => {
     }
   };
 
+  // Effect hook to handle scrolling
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -33,8 +37,10 @@ const Navbar = ({ theme, setTheme }) => {
       }
     };
 
+    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
+    // Clean up by removing the scroll event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -44,11 +50,13 @@ const Navbar = ({ theme, setTheme }) => {
     <div className={`nav-bar ${scrolling ? "scrolled" : ""}`}>
       <div className="Logo">
         <img
-          src={theme === "light" ?  logo_light : logo_dark}
+          src={theme === "light" ?  logo_light : logo_dark} // Displays light or dark logo based on theme
           alt=""
       />
     </div>
       <div className="nav-b">
+        
+      {/* Navigation links */}
       <ul className={`nav-links ${showMenu ? "show" : ""}`}>
         <li>
           <Link
@@ -111,14 +119,18 @@ const Navbar = ({ theme, setTheme }) => {
           </Link>
         </li>
       </ul>
+
+      {/* Theme toggle icon */}
       <img
         onClick={toggleMode}
-        src={theme === "light" ? toggle_light : toggle_dark}
+        src={theme === "light" ? toggle_light : toggle_dark} // Displays light or dark theme toggle icon
         alt=""
         className="toggle-icon"
       />
+
+      {/* Menu toggle icon */}
       <img
-        src={theme === "light" ? menu_icon_light : menu_icon_dark}
+        src={theme === "light" ? menu_icon_light : menu_icon_dark} // Displays light or dark menu toggle icon
         alt=""
         className="menu-icon"
         onClick={toggleMenu}
