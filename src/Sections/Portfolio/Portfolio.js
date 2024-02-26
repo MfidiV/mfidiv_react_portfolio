@@ -1,12 +1,13 @@
-import React,{useState,useEffect} from 'react'
-import './Portfolio.css' ;
-import 'bootstrap/dist/css/bootstrap.min.css'
+// Import necessary dependencies and components
+import React, { useState, useEffect } from 'react';
+import './Portfolio.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
-import 'aos/dist/aos.css'
+import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdge, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-// Import images
+// Import images for portfolio items
 import blogImage from '../../components/assets/Portfolio/blog-6.jpg';
 import taxCalcImage from '../../components/assets/Portfolio/TaxCalc.jpg';
 import unitConvImage from '../../components/assets/Portfolio/UnitConv.png';
@@ -14,25 +15,33 @@ import chatAppImage from '../../components/assets/Portfolio/chatApp.jpg';
 import weatherImage from '../../components/assets/Portfolio/weather.png';
 import bankAppImage from '../../components/assets/Portfolio/pexels-obsahovka-obsahovka-4449784.jpg';
 
+
 const Portfolio = () => {
+    // Initialize AOS library on component mount
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
 
-    useEffect(()=>{
-        AOS.init({duration:1000})
-    },[])
-
+    // State to toggle between two rows of portfolio items
     const [showRow1, setShowRow1] = useState(true);
 
+    // Function to toggle between displaying two rows of portfolio items
     const toggleRows = () => {
         setShowRow1(!showRow1);
     };
-  return (
-    <section className='portfolio' id='portfolio'>
-        <div className="heading">
+
+    // Render component
+    return (
+        <section className='portfolio' id='portfolio'>
+            {/* Portfolio section heading */}
+            <div className="heading">
                 <h2>Portfolio</h2>
                 <span>Recent Work</span>
             </div>
 
+            {/* Second row of portfolio items */}
             <div className="row" id="row2" data-aos="fade-right" style={{ display: showRow1 ? 'none' : 'flex' }}>
+                {/* Portfolio item 1 */}
                 <div className="col-lg-4 mt-4" data-aos="fade-right">
                     <div className="card portfolioContent">
                         <img className="card-img-top" src={blogImage} alt="Best Constructors" style={{ width: '100%' }} />
@@ -46,6 +55,7 @@ const Portfolio = () => {
                     </div>
                 </div>
 
+                {/* Portfolio item 2 */}
                 <div className="col-lg-4 mt-4" data-aos="fade-down">
                     <div className="card portfolioContent">
                         <img className="card-img-top" src={taxCalcImage} alt="Tax Calculator logo" style={{ width: '100%' }} />
@@ -59,7 +69,8 @@ const Portfolio = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-4 mt-4"data-aos="fade-left">
+                {/* Portfolio item 3 */}
+                <div className="col-lg-4 mt-4" data-aos="fade-left">
                     <div className="card portfolioContent">
                         <img className="card-img-top" src={unitConvImage} alt="Converter app logo" style={{ width: '100%' }} />
                         <div className="card-body">
@@ -72,9 +83,11 @@ const Portfolio = () => {
                     </div>
                 </div>
             </div>
-            
-            <div className="row" id="row1"  style={{ display: showRow1 ? 'flex' : 'none' }}>
-                <div className="col-lg-4 mt-4"  data-aos="fade-down">
+
+            {/* First row of portfolio items */}
+            <div className="row" id="row1" style={{ display: showRow1 ? 'flex' : 'none' }}>
+                {/* Portfolio item 4 */}
+                <div className="col-lg-4 mt-4" data-aos="fade-down">
                     <div className="card portfolioContent">
                         <img className="card-img-top" src={chatAppImage} alt="Chat app logo" style={{ width: '100%' }} />
                         <div className="card-body">
@@ -87,7 +100,8 @@ const Portfolio = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-4 mt-4"  data-aos="fade-down">
+                {/* Portfolio item 5 */}
+                <div className="col-lg-4 mt-4" data-aos="fade-down">
                     <div className="card portfolioContent">
                         <img className="card-img-top" src={weatherImage} alt="Weather app logo" style={{ width: '100%' }} />
                         <div className="card-body">
@@ -100,7 +114,8 @@ const Portfolio = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-4 mt-4"  data-aos="fade-down">
+                {/* Portfolio item 6 */}
+                <div className="col-lg-4 mt-4" data-aos="fade-down">
                     <div className="card portfolioContent">
                         <img className="card-img-top" src={bankAppImage} alt="Bank app logo" style={{ width: '100%' }} />
                         <div className="card-body">
@@ -114,13 +129,12 @@ const Portfolio = () => {
                 </div>
             </div>
 
+            {/* Button to toggle between two rows of portfolio items */}
             <div className="toggle">
                 <button className="btn1" onClick={toggleRows}>See more</button>
             </div>
-
-
-    </section>
-  )
+        </section>
+    )
 };
 
-export default Portfolio
+export default Portfolio;
