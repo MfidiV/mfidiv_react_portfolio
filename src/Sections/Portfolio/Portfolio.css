@@ -15,4 +15,14 @@
   .portfolio .toggle .btn1:hover {
     background: var(--hover);
   }
+  @media screen and (max-width: 564px) {
+    .portfolio .toggle .btn1 {
+      margin-left: 45%;
+    } 
+  }
+  @media screen and (max-width: 375px) {
+    .portfolio .toggle .btn1 {
+      margin-left: 45%;
+    }    
+  }
   
