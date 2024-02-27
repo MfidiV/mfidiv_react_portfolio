@@ -185,3 +185,12 @@ input{
       margin-left: 45px;
   }
 }
+@media screen and (max-width: 375px) {
+iframe{
+  border: 0;
+  width: 70%;
+  display: flex;
+  justify-items: center;
+  margin-left: 45px;
+}
+} 
