@@ -9,7 +9,7 @@ const Home = ({ theme }) => {
   const openPDF = () => {
 
     // Constructing the path to the PDF file
-    var pdfPath = process.env.PUBLIC_URL + '/Documents/Mfidi_V.pdf';
+    var pdfPath = process.env.PUBLIC_URL + '/Documents/Mfidi V.pdf';
     window.open(pdfPath, '_blank');
   };
 
