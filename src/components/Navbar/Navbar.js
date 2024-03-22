@@ -17,7 +17,11 @@ const Navbar = ({ theme, setTheme }) => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
-
+  
+   // Function to handle click on navigation links
+   const handleNavLinkClick = () => {
+    setShowMenu(false); // Hide the menu when a navigation link is clicked
+  };
   // Function to toggle between light and dark themes
   const toggleMode = () => {
     if (theme === "light") {
@@ -66,6 +70,7 @@ const Navbar = ({ theme, setTheme }) => {
             smooth={true}
             offset={-70}
             duration={0} // Set duration to 0 for immediate scroll
+            onClick={handleNavLinkClick} // Call handleNavLinkClick when a link is clicked
           >
             Home
           </Link>
@@ -78,6 +83,7 @@ const Navbar = ({ theme, setTheme }) => {
             smooth={true}
             offset={-70}
             duration={0} // Set duration to 0 for immediate scroll
+            onClick={handleNavLinkClick} // Call handleNavLinkClick when a link is clicked
           >
             About
           </Link>
@@ -90,6 +96,7 @@ const Navbar = ({ theme, setTheme }) => {
             smooth={true}
             offset={-70}
             duration={0} // Set duration to 0 for immediate scroll
+            onClick={handleNavLinkClick} // Call handleNavLinkClick when a link is clicked
           >
             Services
           </Link>
@@ -102,6 +109,7 @@ const Navbar = ({ theme, setTheme }) => {
             smooth={true}
             offset={-70}
             duration={0} // Set duration to 0 for immediate scroll
+            onClick={handleNavLinkClick} // Call handleNavLinkClick when a link is clicked
           >
             Portfolio
           </Link>
@@ -114,6 +122,7 @@ const Navbar = ({ theme, setTheme }) => {
             smooth={true}
             offset={-70}
             duration={0} // Set duration to 0 for immediate scroll
+            onClick={handleNavLinkClick} // Call handleNavLinkClick when a link is clicked
           >
             Contact
           </Link>
