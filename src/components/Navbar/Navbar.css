@@ -104,21 +104,26 @@
       width: 30%; /* Adjust the width as needed for smaller screens */
       /* max-width: 300px;  */
       background-color: #17199b;
+      color: white;
       border-top: 1px solid #ccc;
       /* border-radius: 30px; */
       z-index: 100; /* Set a high z-index value to ensure the menu is on top */
       padding:0;
-      margin:0 20px;
+      /* margin:0 20px; */
     }
   
     .nav-links.show {
       display: flex;
     }
   }
-.container.dark .logo,
+/* .container.dark .logo,
 .container.dark .nav-links{
   color: white; /* Set logo and menu color to background color */
-}
+/* } */
+
+.container .nav-links{
+  color:white;
+} */
 
 .container.dark .menu-icon {
   color: white;
