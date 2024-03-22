@@ -20,9 +20,9 @@ const Services = () => {
         if (service === "Backend") {
             setModalContent("Experienced back-end developer with proficiency in Python, Java, and Node.js, skilled in database management, scalable applications, server technologies, RESTful APIs, and cloud platforms. Skilled in troubleshooting, debugging, and security measures, committed to efficient, reliable solutions.");
         } else if (service === "Frontend") {
-            setModalContent("A dedicated front-end developer with expertise in HTML, CSS, JavaScript, popular frameworks like React and Angular, adept at creating visually appealing user interfaces, optimizing web performance, and staying current with design trends, adept at working collaboratively in cross-functional teams.");
+            setModalContent("Dedicated front-end developer with expertise in HTML, CSS, JavaScript, popular frameworks like React, BootStrap, adept at creating visually appealing user interfaces, optimizing web performance, and staying current with design trends, adept at working collaboratively in cross-functional teams.");
         } else {
-            setModalContent("The designer is a detail-oriented UI/UX professional, specializing transforming complex concepts into intuitive, visually appealing interfaces. They are committed to staying updated with industry trends and technologies, ensuring their work remains at the forefront of modern design practice");
+            setModalContent("Detail-oriented UI/UX professional, specializing transforming complex concepts into intuitive, visually appealing interfaces. They are committed to staying updated with industry trends and technologies, ensuring their work remains at the forefront of modern design practice");
         }
         setShowModal(true); // Show modal after setting content
     };
