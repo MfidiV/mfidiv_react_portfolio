@@ -29,6 +29,8 @@
   cursor: pointer;
   
 }
+
+
 .scrolled {
   background-color: #80b9ca; /* Change to your desired background color for scrolled state */
 }
@@ -50,19 +52,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--text-color);
+}
+.dark-mode .nav-links{
+  color: var(--bg-color);
 }
 
 .nav-links li {
   margin: 10px;
   font-size: 18px;
   cursor: pointer;
+  /* color:white; */
+}
 
+
+.dark-mode .nav-links {
+  color: var(--text-color); /* Set text color to bg color in dark mode */
 }
 
 .show {
   display: flex;
   flex-direction: column;
 }
+
+.container.dark .logo,
+.container.dark .nav-links{
+  color: white; /* Set logo and menu color to background color */
+} 
+
+.container .nav-links{
+  color:var(--bg-color);
+} 
 
 @media screen and (max-width: 768px) {
     .toggle-icon {
@@ -115,7 +135,14 @@
     .nav-links.show {
       display: flex;
     }
-  }
+    .container.dark .nav-links{
+      color: white; /* Set logo and menu color to background color */
+    } 
+    
+    .container .nav-links{
+      color: white; /* Set logo and menu color to background color */
+    }
+  } 
 
 @media screen and (min-width: 769px) {
   .nav-links {
@@ -125,6 +152,7 @@
     width: auto; /* Reset width for larger screens */
     border-top: none; /* Remove border for larger screens */
   }
+
 }
 @media screen and (max-width: 400px) {
   .toggle-icon {
@@ -157,4 +185,12 @@
     margin-right: 20px; /* Adjust margin for spacing */
 
   }
+.container.dark .nav-links{
+  color: white; /* Set logo and menu color to background color */
+} 
+
+.container .nav-links{
+  color: white; /* Set logo and menu color to background color */
+} 
 }
+
