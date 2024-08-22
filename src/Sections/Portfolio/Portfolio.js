@@ -82,6 +82,30 @@ const Portfolio = () => {
                         </div>
                     </div>
                 </div>
+                <div className="col-lg-4 mt-4" data-aos="fade-left">
+                    <div className="card portfolioContent">
+                        <img className="card-img-top" src={unitConvImage} alt="Converter app logo" style={{ width: '100%' }} />
+                        <div className="card-body">
+                            <h4 className="card-title">Unit Converter</h4>
+                            <p className="card-text">This is a simple Java Swing application that serves as a unit converter.</p>
+                            <div className="text-center">
+                                <a href="https://github.com/MfidiV/Converter-App" className="btn1 btn-success"><FontAwesomeIcon icon={faGithub} /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-4 mt-4" data-aos="fade-left">
+                    <div className="card portfolioContent">
+                        <img className="card-img-top" src={unitConvImage} alt="Converter app logo" style={{ width: '100%' }} />
+                        <div className="card-body">
+                            <h4 className="card-title">Vuyo</h4>
+                            <p className="card-text">This is a simple Java Swing application that serves as a unit converter.</p>
+                            <div className="text-center">
+                                <a href="https://github.com/MfidiV/Converter-App" className="btn1 btn-success"><FontAwesomeIcon icon={faGithub} /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/* First row of portfolio items */}
