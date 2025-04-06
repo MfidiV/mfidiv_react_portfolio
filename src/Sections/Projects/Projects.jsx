@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/ui/button";
 import "./Projects.css"; // Import external CSS
@@ -9,6 +10,8 @@ import taxCalcImage from '../../components/assets/Portfolio/TaxCalc.jpg';
 import unitConvImage from '../../components/assets/Portfolio/UnitConv.png';
 // import chatAppImage from '../../components/assets/Portfolio/chatApp.jpg';
 import tetris from '../../components/assets/Portfolio/tetris.png'
+import bankAppImage from '../../components/assets/Portfolio/UnitConv.png';
+
 
 const projects = [
   {
