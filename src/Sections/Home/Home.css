@@ -2,27 +2,13 @@
 
 .home {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   /* min-height: 100vh; */
-  gap: 0.5rem;
+  gap: 4.5rem;
     /* background-image: url('../../components/assets/hero-2.webp'); */
 
-}
-
-.about-img img {
-  border-radius: 40% 60% 31% 69% / 66% 0% 100% 34%;
-  width: 350px;
-  height: auto;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-img img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hero-image{
@@ -31,18 +17,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   filter: opacity(.125) blur(2px) grayscale(.9);
-  position:fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 0;
-}
-
-.TextHome{
-  display:  flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .home-text {
@@ -58,7 +38,6 @@
 }
 
 .home-buttons {
-  margin-top: 20px;
   display: flex;
   flex-direction: row; /* Display buttons in a row */
   gap: 2rem; /* Adjust the gap between buttons as needed */
@@ -67,7 +46,6 @@
 .home-text h1 {
   font-size: 4rem;
   font-family: cursive;
-  font-weight: 900;
 }
 
 .btn1 {
