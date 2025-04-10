@@ -94,6 +94,29 @@
   transition: all 0.3s ease;
 }
 
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tech-icon {
+  font-size: 24px;
+  color: #3b82f6;
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.tech-icon:hover {
+  transform: rotate(360deg); /* Spins the icon */
+}
+
+
+.project-button {
+  margin-top: 10px;
+}
+
+
 /* Button Styling */
 .project-button {
   display: block;
