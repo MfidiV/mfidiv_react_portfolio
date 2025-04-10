@@ -6,46 +6,46 @@ import Button from "../../components/ui/button";
 import "./Projects.css"; // Import external CSS
 
 import blogImage from '../../components/assets/Portfolio/blog-6.jpg';
-import taxCalcImage from '../../components/assets/Portfolio/TaxCalc.jpg';
-import unitConvImage from '../../components/assets/Portfolio/UnitConv.png';
-// import chatAppImage from '../../components/assets/Portfolio/chatApp.jpg';
+import weather from '../../components/assets/Portfolio/weather.png';
+import chatAppImage from '../../components/assets/Portfolio/chatApp.jpg';
 import tetris from '../../components/assets/Portfolio/tetris.png'
-import bankAppImage from '../../components/assets/Portfolio/UnitConv.png';
-
+import bankAppImage from '../../components/assets/Portfolio/Banking.jpeg';
+// import taxCalcImage from '../../components/assets/Portfolio/TaxCalc.jpg';
+// import unitConvImage from '../../components/assets/Portfolio/UnitConv.png';
 
 const projects = [
   {
-    title: "Bus Transport Application",
-    description: "An advanced platform designed to enhance passenger and driver transport management.",
-    link: "/projects/bus-app",
+    title: "Chat App",
+    description: "This is a real-time chat app,It allows users to connect, chat, and exchange messages in real time.",
+    link: "https://theebestchat.netlify.app/",
+    category: "App",
+    image: chatAppImage,
+  },
+  {
+    title: "Weather App",
+    description: "A simple web application that allows users to retrieve current weather information for a specified location.",
+    link: "https://github.com/MfidiV/Weather_App",
+    category: "App",
+    image: weather,
+  },
+  {
+    title: "Bank Application",
+    description: "An application for user experience with bank processes. It allows users to be in control of their money.",
+    link: "https://github.com/MfidiV/Bank_Application",
     category: "App",
     image: bankAppImage,
   },
   {
-    title: "CV Builder Application",
-    description: "A professional resume-building tool tailored for efficiency and customization.",
-    link: "/projects/cv-builder",
-    category: "App",
-    image: blogImage,
-  },
-  {
-    title: "Portfolio Website",
-    description: "A comprehensive showcase of my skills, expertise, and completed projects.",
-    link: "/projects/portfolio",
+    title: "Construction Website",
+    description: "A responsive construction company website, The Best Constructors",
+    link: "https://thebestconstruction.netlify.app/#",
     category: "Website",
-    image: taxCalcImage,
-  },
-  {
-    title: "MERN Task Management System",
-    description: "A structured project management tool built using the MERN stack for optimized task handling.",
-    link: "/projects/task-manager",
-    category: "App",
-    image: unitConvImage,
+    image: blogImage,
   },
   {
     title: "Game Prototype",
     description: "An interactive game built using modern web technologies.",
-    link: "/projects/game-prototype",
+    link: "https://thebestconstruction.netlify.app/theebest-tetris",
     category: "Game",
     image: tetris,
   },
@@ -64,10 +64,10 @@ export default function Projects() {
   return (
     <section className="projects-container">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="projects-title">Professional Projects</h2>
-        <p className="projects-description">
-          Explore a selection of projects that demonstrate my expertise in software development and innovative solutions.
-        </p>
+        <div className="heading">
+            <h2>Portfolio</h2>
+            <span>Recent Work</span>
+        </div>
 
         {/* Category Filter */}
         <div className="filter-buttons">
