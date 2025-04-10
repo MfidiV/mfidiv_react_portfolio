@@ -1,0 +1,45 @@
+[
+    {
+      "title": "Chat App",
+      "description": "This is a real-time chat app. It allows users to connect, chat, and exchange messages in real time.",
+      "link": "https://theebestchat.netlify.app/",
+      "category": "App",
+      "image": "chatApp.jpg"
+    },
+    {
+      "title": "Buno Seats",
+      "description": "A company website showcasing innovative seating solutions for indoor, outdoor, and office use.",
+      "link": "https://bunoseats.web.app/",
+      "category": "Website",
+      "image": "Buno Seats.png"
+    },
+    {
+      "title": "Weather App",
+      "description": "A simple web application that allows users to retrieve current weather information for a specified location.",
+      "link": "https://github.com/MfidiV/Weather_App",
+      "category": "App",
+      "image": "weather.png"
+    },
+    {
+      "title": "Bank Application",
+      "description": "An application for user experience with bank processes. It allows users to be in control of their money.",
+      "link": "https://github.com/MfidiV/Bank_Application",
+      "category": "App",
+      "image": "Banking.jpeg"
+    },
+    {
+      "title": "Construction Website",
+      "description": "A professional website built for a construction company to showcase services, projects, and contact details.",
+      "link": "https://thebestconstruction.netlify.app/#",
+      "category": "Website",
+      "image": "blog-6.jpg"
+    },
+    {
+      "title": "Game Prototype",
+      "description": "An interactive and responsive Tetris game supporting single and two-player modes.",
+      "link": "https://thebestconstruction.netlify.app/theebest-tetris",
+      "category": "Game",
+      "image": "tetris.png"
+    }
+  ]
+  

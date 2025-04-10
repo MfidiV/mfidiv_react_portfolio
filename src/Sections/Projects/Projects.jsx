@@ -5,68 +5,19 @@ import { Link } from "react-router-dom";
 import Button from "../../components/ui/button";
 import "./Projects.css"; // Import external CSS
 
-import blogImage from '../../components/assets/Portfolio/blog-6.jpg';
-import weather from '../../components/assets/Portfolio/weather.png';
-import chatAppImage from '../../components/assets/Portfolio/chatApp.jpg';
-import tetris from '../../components/assets/Portfolio/tetris.png'
-import bankAppImage from '../../components/assets/Portfolio/Banking.jpeg';
-import Seats from '../../components/assets/Portfolio/Buno Seats.png';
-// import unitConvImage from '../../components/assets/Portfolio/UnitConv.png';
+import projectData from '../../../src/components/assets/Data/projects.json';
 
-const projects = [
-  {
-    title: "Chat App",
-    description: "This is a real-time chat app,It allows users to connect, chat, and exchange messages in real time.",
-    link: "https://theebestchat.netlify.app/",
-    category: "App",
-    image: chatAppImage,
-  },
-  {
-    title: "Buno Seats",
-    description: "A company website showcasing innovative seating solutions for indoor, outdoor, and office use.",
-    link: "https://bunoseats.web.app/",
-    category: "Website",
-    image: Seats,
-  },
-  {
-    title: "Weather App",
-    description: "A simple web application that allows users to retrieve current weather information for a specified location.",
-    link: "https://github.com/MfidiV/Weather_App",
-    category: "App",
-    image: weather,
-  },
-  {
-    title: "Bank Application",
-    description: "An application for user experience with bank processes. It allows users to be in control of their money.",
-    link: "https://github.com/MfidiV/Bank_Application",
-    category: "App",
-    image: bankAppImage,
-  },
-  {
-    title: "Construction Website",
-    description: "A professional website built for a construction company to showcase services, projects, and contact details.",
-    link: "https://thebestconstruction.netlify.app/#",
-    category: "Website",
-    image: blogImage,
-  },
-  {
-    title: "Game Prototype",
-    description: "An interactive and responsive Tetris game supporting single and two-player modes.",
-    link: "https://thebestconstruction.netlify.app/theebest-tetris",
-    category: "Game",
-    image: tetris,
-  },
-];
-
+// Define categories for filtering
 const categories = ["All", "App", "Game", "Website"];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
+  // Filter projects based on the selected category
   const filteredProjects =
     selectedCategory === "All"
-      ? projects
-      : projects.filter((project) => project.category === selectedCategory);
+      ? projectData
+      : projectData.filter((project) => project.category === selectedCategory);
 
   return (
     <section className="projects-container">
@@ -81,9 +32,7 @@ export default function Projects() {
           {categories.map((category) => (
             <Button
               key={category}
-              className={`filter-button ${
-                selectedCategory === category ? "active" : "inactive"
-              }`}
+              className={`filter-button ${selectedCategory === category ? "active" : "inactive"}`}
               onClick={() => setSelectedCategory(category)}
             >
               {category}
@@ -102,7 +51,12 @@ export default function Projects() {
             transition={{ duration: 0.5, delay: index * 0.2 }}
             className="project-card"
           >
-            <img src={project.image} alt={project.title} className="project-image" />
+            {/* Dynamically require the image based on the project data */}
+            <img
+              src={require(`../../components/assets/Portfolio/${project.image}`)}
+              alt={project.title}
+              className="project-image"
+            />
             <h3 className="text-xl font-semibold text-indigo-400">{project.title}</h3>
             <p className="text-gray-400 mt-2">{project.description}</p>
             <Link to={project.link}>

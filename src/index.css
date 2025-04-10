@@ -129,6 +129,9 @@ a {
   border-radius: 8px; /* Optional: Add rounded corners to the overlay */
 }
 .heading {
+  font-size: 1.25rem;         /* equivalent to text-xl */
+  font-weight: 600;           /* equivalent to font-semibold */
+  /* color: #818cf8;  */
   text-align: center;
   color:var(--bg-color)
 }
