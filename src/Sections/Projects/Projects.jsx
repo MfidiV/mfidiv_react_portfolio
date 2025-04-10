@@ -10,7 +10,7 @@ import weather from '../../components/assets/Portfolio/weather.png';
 import chatAppImage from '../../components/assets/Portfolio/chatApp.jpg';
 import tetris from '../../components/assets/Portfolio/tetris.png'
 import bankAppImage from '../../components/assets/Portfolio/Banking.jpeg';
-// import taxCalcImage from '../../components/assets/Portfolio/TaxCalc.jpg';
+import Seats from '../../components/assets/Portfolio/Buno Seats.png';
 // import unitConvImage from '../../components/assets/Portfolio/UnitConv.png';
 
 const projects = [
@@ -20,6 +20,13 @@ const projects = [
     link: "https://theebestchat.netlify.app/",
     category: "App",
     image: chatAppImage,
+  },
+  {
+    title: "Buno Seats",
+    description: "A company website showcasing innovative seating solutions for indoor, outdoor, and office use.",
+    link: "https://bunoseats.web.app/",
+    category: "Website",
+    image: Seats,
   },
   {
     title: "Weather App",
@@ -37,14 +44,14 @@ const projects = [
   },
   {
     title: "Construction Website",
-    description: "A responsive construction company website, The Best Constructors",
+    description: "A professional website built for a construction company to showcase services, projects, and contact details.",
     link: "https://thebestconstruction.netlify.app/#",
     category: "Website",
     image: blogImage,
   },
   {
     title: "Game Prototype",
-    description: "An interactive game built using modern web technologies.",
+    description: "An interactive and responsive Tetris game supporting single and two-player modes.",
     link: "https://thebestconstruction.netlify.app/theebest-tetris",
     category: "Game",
     image: tetris,
