@@ -3,14 +3,12 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/ui/button";
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs } from 'react-icons/fa'; // Importing some react icons
-import "./Projects.css"; // Import external CSS
-
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs} from 'react-icons/fa';
+import "./Projects.css"; // Import external CSS 
 import projectData from '../../../src/components/assets/Data/projects.json'; // Your JSON data
 
 // Define categories for filtering
 const categories = ["All", "App", "Game", "Website"];
-
 // Map each tech to its icon
 const iconMapping = {
   "React": <FaReact />,
