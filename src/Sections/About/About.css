@@ -1,9 +1,9 @@
-.about{
-  /* border: 2px solid white; */
+.about {
   background: rgba(136, 105, 153, 0.3);
-
+  box-shadow: 0 0 30px rgba(136, 105, 153, 0.4);
+  border-radius: 20px;
+  transition: 0.3s;
 }
-
 .about p{
   font-size: var(--p-font);
   font-weight: 400;

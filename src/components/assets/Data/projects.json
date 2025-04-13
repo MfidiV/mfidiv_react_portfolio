@@ -13,7 +13,7 @@
       "link": "https://bunoseats.web.app/",
       "category": "Website",
       "image": "Buno Seats.png",
-      "techStack": ["HTML", "CSS", "JavaScript"]
+      "techStack": ["React","Firebase"]
     },
     {
       "title": "Weather App",
@@ -21,7 +21,7 @@
       "link": "https://github.com/MfidiV/Weather_App",
       "category": "App",
       "image": "weather.png",
-      "techStack": ["HTML", "CSS", "JavaScript"]
+      "techStack": ["Python", "Flask","API"]
     },
     {
       "title": "Bank Application",
@@ -29,7 +29,7 @@
       "link": "https://github.com/MfidiV/Bank_Application",
       "category": "App",
       "image": "Banking.jpeg",
-      "techStack": ["JavaScript", "Node.js", "Express"]
+      "techStack": ["Python", "SQlite","API"]
     },
     {
       "title": "Construction Website",

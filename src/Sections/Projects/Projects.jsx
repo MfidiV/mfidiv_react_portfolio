@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/ui/button";
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs} from 'react-icons/fa';
-import "./Projects.css"; // Import external CSS 
-import projectData from '../../../src/components/assets/Data/projects.json'; // Your JSON data
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs,FaCloud, FaJava, FaPython} from 'react-icons/fa';
+import { SiFlask,SiSqlite, SiFirebase} from 'react-icons/si';
+import "./Projects.css";
+import GamePopup from "../../../src/components/GamePopup/GamePopup";
+import projectData from '../../../src/components/assets/Data/projects.json'; 
 
 // Define categories for filtering
 const categories = ["All", "App", "Game", "Website"];
@@ -16,16 +18,28 @@ const iconMapping = {
   "HTML": <FaHtml5 />,
   "CSS": <FaCss3Alt />,
   "JavaScript": <FaJs />,
+  "Python":<FaPython/>,
+  "Java":<FaJava/>,
+  "Flask": <SiFlask />,
+  "API": <FaCloud />,
+  "SQLite": <SiSqlite />,
+  "Firebase": <SiFirebase />,
 };
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [showModal, setShowModal] = useState(false);
+
+  const handleModalOpen = () => setShowModal(true);
+  const handleModalClose = () => setShowModal(false);
 
   // Filter projects based on the selected category
   const filteredProjects =
     selectedCategory === "All"
       ? projectData
-      : projectData.filter((project) => project.category === selectedCategory);
+      : projectData.filter(
+          (project) => project.category === selectedCategory
+        );
 
   return (
     <section className="projects-container">
@@ -40,7 +54,9 @@ export default function Projects() {
           {categories.map((category) => (
             <Button
               key={category}
-              className={`filter-button ${selectedCategory === category ? "active" : "inactive"}`}
+              className={`filter-button ${
+                selectedCategory === category ? "active" : "inactive"
+              }`}
               onClick={() => setSelectedCategory(category)}
             >
               {category}
@@ -64,21 +80,33 @@ export default function Projects() {
               alt={project.title}
               className="project-image"
             />
-            <h3 className="text-xl font-semibold text-indigo-400">{project.title}</h3>
+            <h3 className="text-xl font-semibold text-indigo-400">
+              {project.title}
+            </h3>
             <p className="text-gray-400 mt-2">{project.description}</p>
 
             {/* Render tech stack icons */}
             <div className="tech-stack">
               {project.techStack.map((tech, index) => (
                 <span key={index} className="tech-icon">
-                  {iconMapping[tech] || tech} {/* Fallback to tech name if icon is not found */}
+                  {iconMapping[tech] || tech}
                 </span>
               ))}
             </div>
 
-            <Link to={project.link}>
-              <Button className="project-button">View Project</Button>
-            </Link>
+            {/* Game modal for Game Prototype only */}
+            {project.title === "Game Prototype" ? (
+              <>
+                <Button onClick={handleModalOpen} className="project-button">
+                  View Project
+                </Button>
+                {showModal && <GamePopup onClose={handleModalClose} />}
+              </>
+            ) : (
+              <Link to={project.link}>
+                <Button className="project-button">View Project</Button>
+              </Link>
+            )}
           </motion.div>
         ))}
       </div>
