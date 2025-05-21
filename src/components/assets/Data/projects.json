@@ -1,5 +1,13 @@
 [
     {
+      "title": "Table Booking App",
+      "description": "A table booking app using a clean and intuitive UI. Effortlessly assist to manage table reservations.",
+      "link": "https://table-booking-c4tp.onrender.com/",
+      "category": "App",
+      "image": "Table.png",
+      "techStack": ["Flask", "HTML", "css","JavaScript","Supabase","API"]
+    },
+    {
       "title": "Chat App",
       "description": "This is a real-time chat app. It allows users to connect, chat, and exchange messages in real time.",
       "link": "https://theebestchat.netlify.app/",
@@ -22,14 +30,6 @@
       "category": "App",
       "image": "weather.png",
       "techStack": ["Python", "Flask","API"]
-    },
-    {
-      "title": "Bank Application",
-      "description": "An application for user experience with bank processes. It allows users to be in control of their money.",
-      "link": "https://github.com/MfidiV/Bank_Application",
-      "category": "App",
-      "image": "Banking.jpeg",
-      "techStack": ["Python", "SQlite","API"]
     },
     {
       "title": "Construction Website",

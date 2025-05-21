@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/ui/button";
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs,FaCloud, FaJava, FaPython} from 'react-icons/fa';
-import { SiFlask,SiSqlite, SiFirebase} from 'react-icons/si';
+import { SiFlask,SiSqlite, SiSupabase, SiFirebase} from 'react-icons/si';
 import "./Projects.css";
 import GamePopup from "../../../src/components/GamePopup/GamePopup";
 import projectData from '../../../src/components/assets/Data/projects.json'; 
@@ -24,6 +24,7 @@ const iconMapping = {
   "API": <FaCloud />,
   "SQLite": <SiSqlite />,
   "Firebase": <SiFirebase />,
+  "Supabase":<SiSupabase/>
 };
 
 export default function Projects() {
