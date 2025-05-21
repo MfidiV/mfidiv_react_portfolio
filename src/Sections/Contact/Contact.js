@@ -5,7 +5,7 @@ import { faMapMarkerAlt, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import './Contact.css';
 import emailjs from 'emailjs-com';
 import { Alert } from 'react-bootstrap';
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 // Modal component for displaying messages
 function Modal({ message, onClose }) {
@@ -39,7 +39,7 @@ function Contact() {
   // State for showing alert
   const [showAlert, setShowAlert] = useState(false);
   // State for ReCAPTCHA verification
-  const [recaptchaVerified, setRecaptchaVerified] = useState(false);
+  // const [recaptchaVerified, setRecaptchaVerified] = useState(false);
   // State for showing modal
   const [showModal, setShowModal] = useState(false);
   // State for modal message
@@ -54,20 +54,20 @@ function Contact() {
   };
 
   // Function to handle ReCAPTCHA change
-  const handleRecaptchaChange = (token) => {
-    setRecaptchaVerified(true);
-  };
+  // const handleRecaptchaChange = (token) => {
+  //   setRecaptchaVerified(true);
+  // };
 
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Checking ReCAPTCHA verification
-    if (!recaptchaVerified) {
-      setErrorMessage('Please complete the ReCAPTCHA');
-      setShowAlert(true);
-      return;
-    }
+    // if (!recaptchaVerified) {
+    //   setErrorMessage('Please complete the ReCAPTCHA');
+    //   setShowAlert(true);
+    //   return;
+    // }
 
 
     const { name, email, message, subject } = formData;     // Destructuring form data
@@ -178,6 +178,8 @@ function Contact() {
                 {/* Options for subject */}
                 <option value="General Inquiry">General Inquiry</option>
                 <option value="Collaboration">Collaboration</option>
+            
+            
                 <option value="Job/Career growth">Job/Career growth</option>
                 {/* Add more options as needed */}
               </select>
@@ -206,10 +208,10 @@ function Contact() {
           {showModal && <Modal message={modalMessage} onClose={() => setShowModal(false)} />}
           <div className="Last-step">
             {/* ReCAPTCHA component */}
-            <ReCAPTCHA 
+            {/* <ReCAPTCHA 
               sitekey="6LfRFnApAAAAAOU7KQ-o7Tn1I4unb4wsFA1FZknS"
               onChange={handleRecaptchaChange}
-            />
+            /> */}
             {/* Submit button */}
             <button type="submit" className="btn1"> <FontAwesomeIcon icon={faPaperPlane} /></button>
           </div>

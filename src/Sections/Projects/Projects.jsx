@@ -42,7 +42,7 @@ export default function Projects() {
         );
 
   return (
-    <section className="projects-container">
+    <section className="projects-container" id="projects-container">
       <div className="max-w-6xl mx-auto text-center">
         <div className="heading">
           <h2>Portfolio</h2>

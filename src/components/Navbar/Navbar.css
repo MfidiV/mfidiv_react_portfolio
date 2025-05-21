@@ -121,7 +121,7 @@
       position: absolute;
       top: calc(100% + 0px); /* Position the menu just below the navbar */
       right: 0;
-      width: 30%; /* Adjust the width as needed for smaller screens */
+      width: 100%; /* Adjust the width as needed for smaller screens */
       /* max-width: 300px;  */
       background-color: #17199b;
       color: white;

@@ -104,14 +104,14 @@ const Navbar = ({ theme, setTheme }) => {
         <li>
           <Link
             activeClass="active"
-            to="portfolio"
+            to="projects-container"
             spy={true}
             smooth={true}
             offset={-70}
             duration={0} // Set duration to 0 for immediate scroll
             onClick={handleNavLinkClick} // Call handleNavLinkClick when a link is clicked
           >
-            Portfolio
+            Projects
           </Link>
         </li>
         <li>
